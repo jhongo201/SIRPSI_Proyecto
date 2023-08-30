@@ -1,0 +1,293 @@
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Log4net.config
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\appsettings.Development.json
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\appsettings.json
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\SIRPSI.exe
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\SIRPSI.deps.json
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\SIRPSI.runtimeconfig.json
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\SIRPSI.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\SIRPSI.pdb
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\AutoMapper.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Azure.Core.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Azure.Identity.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Humanizer.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\log4net.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\MailKit.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\MimeKit.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\NETCore.MailKit.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\BouncyCastle.Crypto.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.CodeDom.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\DataAccess.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\EmailServices.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\DataAccess.pdb
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\EmailServices.pdb
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.csproj.AssemblyReference.cache
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.AssemblyInfoInputs.cache
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.AssemblyInfo.cs
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.csproj.CoreCompileInputs.cache
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.MvcApplicationPartsAssemblyInfo.cs
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.MvcApplicationPartsAssemblyInfo.cache
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets\msbuild.SIRPSI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets\msbuild.build.SIRPSI.props
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.SIRPSI.props
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.SIRPSI.props
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets.build.json
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets.development.json
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\scopedcss\bundle\SIRPSI.styles.css
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.csproj.CopyComplete
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\refint\SIRPSI.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.pdb
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.genruntimeconfig.cache
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\ref\SIRPSI.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Log4net.config
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\appsettings.Development.json
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\appsettings.json
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\SIRPSI.exe
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\SIRPSI.deps.json
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\SIRPSI.runtimeconfig.json
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\SIRPSI.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\SIRPSI.pdb
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\AutoMapper.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Azure.Core.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Azure.Identity.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Humanizer.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\log4net.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\MailKit.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\MimeKit.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\NETCore.MailKit.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\BouncyCastle.Crypto.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.CodeDom.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Twilio.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\DataAccess.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\EmailServices.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\MessengerServices.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\DataAccess.pdb
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\EmailServices.pdb
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\MessengerServices.pdb
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.csproj.AssemblyReference.cache
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.AssemblyInfoInputs.cache
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.AssemblyInfo.cs
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.csproj.CoreCompileInputs.cache
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.MvcApplicationPartsAssemblyInfo.cs
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.MvcApplicationPartsAssemblyInfo.cache
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets\msbuild.SIRPSI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets\msbuild.build.SIRPSI.props
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.SIRPSI.props
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.SIRPSI.props
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets.build.json
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets.development.json
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\scopedcss\bundle\SIRPSI.styles.css
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.csproj.CopyComplete
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\refint\SIRPSI.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.pdb
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.genruntimeconfig.cache
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\ref\SIRPSI.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Log4net.config
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\appsettings.Development.json
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\appsettings.json
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\SIRPSI.exe
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\SIRPSI.deps.json
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\SIRPSI.runtimeconfig.json
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\SIRPSI.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\SIRPSI.pdb
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\AutoMapper.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Azure.Core.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Azure.Identity.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Humanizer.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\log4net.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\MailKit.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.OpenApi.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\MimeKit.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\NETCore.MailKit.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\BouncyCastle.Crypto.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.CodeDom.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Drawing.Common.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Memory.Data.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Runtime.Caching.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Security.Permissions.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\System.Windows.Extensions.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\Twilio.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\DataAccess.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\EmailServices.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\MessengerServices.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\DataAccess.pdb
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\EmailServices.pdb
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\bin\Debug\net7.0\MessengerServices.pdb
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.csproj.AssemblyReference.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.AssemblyInfoInputs.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.AssemblyInfo.cs
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.csproj.CoreCompileInputs.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.MvcApplicationPartsAssemblyInfo.cs
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.MvcApplicationPartsAssemblyInfo.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets\msbuild.SIRPSI.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets\msbuild.build.SIRPSI.props
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.SIRPSI.props
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.SIRPSI.props
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets.pack.json
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets.build.json
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\staticwebassets.development.json
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\scopedcss\bundle\SIRPSI.styles.css
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.csproj.CopyComplete
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\refint\SIRPSI.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.pdb
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\SIRPSI.genruntimeconfig.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\SIRPSI\obj\Debug\net7.0\ref\SIRPSI.dll

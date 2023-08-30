@@ -1,0 +1,36 @@
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\EmailServices\bin\Debug\net7.0\EmailServices.deps.json
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\EmailServices\bin\Debug\net7.0\EmailServices.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\EmailServices\bin\Debug\net7.0\EmailServices.pdb
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.csproj.AssemblyReference.cache
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.AssemblyInfoInputs.cache
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.AssemblyInfo.cs
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.csproj.CoreCompileInputs.cache
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\refint\EmailServices.dll
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.pdb
+C:\Develop\John Perez Backend\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\ref\EmailServices.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\EmailServices\bin\Debug\net7.0\EmailServices.deps.json
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\EmailServices\bin\Debug\net7.0\EmailServices.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\EmailServices\bin\Debug\net7.0\EmailServices.pdb
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.csproj.AssemblyReference.cache
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.AssemblyInfoInputs.cache
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.AssemblyInfo.cs
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.csproj.CoreCompileInputs.cache
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\refint\EmailServices.dll
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.pdb
+C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\ref\EmailServices.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\EmailServices\bin\Debug\net7.0\EmailServices.deps.json
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\EmailServices\bin\Debug\net7.0\EmailServices.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\EmailServices\bin\Debug\net7.0\EmailServices.pdb
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.csproj.AssemblyReference.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.AssemblyInfoInputs.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.AssemblyInfo.cs
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.csproj.CoreCompileInputs.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\refint\EmailServices.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\EmailServices.pdb
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\EmailServices\obj\Debug\net7.0\ref\EmailServices.dll

@@ -1,0 +1,12 @@
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\bin\Release\net6.0\MessengerServices.deps.json
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\bin\Release\net6.0\MessengerServices.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\bin\Release\net6.0\MessengerServices.pdb
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\obj\Release\net6.0\MessengerServices.csproj.AssemblyReference.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\obj\Release\net6.0\MessengerServices.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\obj\Release\net6.0\MessengerServices.AssemblyInfoInputs.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\obj\Release\net6.0\MessengerServices.AssemblyInfo.cs
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\obj\Release\net6.0\MessengerServices.csproj.CoreCompileInputs.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\obj\Release\net6.0\MessengerServices.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\obj\Release\net6.0\refint\MessengerServices.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\obj\Release\net6.0\MessengerServices.pdb
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\obj\Release\net6.0\ref\MessengerServices.dll

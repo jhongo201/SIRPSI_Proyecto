@@ -1,0 +1,14 @@
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\bin\Release\net7.0\DataAccess.deps.json
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\bin\Release\net7.0\DataAccess.runtimeconfig.json
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\bin\Release\net7.0\DataAccess.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\bin\Release\net7.0\DataAccess.pdb
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Release\net7.0\DataAccess.csproj.AssemblyReference.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Release\net7.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Release\net7.0\DataAccess.AssemblyInfoInputs.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Release\net7.0\DataAccess.AssemblyInfo.cs
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Release\net7.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Release\net7.0\DataAccess.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Release\net7.0\refint\DataAccess.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Release\net7.0\DataAccess.pdb
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Release\net7.0\DataAccess.genruntimeconfig.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Release\net7.0\ref\DataAccess.dll
