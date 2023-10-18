@@ -7424,11 +7424,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\15 Ago\\SIRPSI_Proyecto\\SIRPSI\\SIRPSI.csproj",
+      "projectUniqueName": "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\oct 17\\SIRPSI_Proyecto\\SIRPSI\\SIRPSI.csproj",
       "projectName": "SIRPSI",
-      "projectPath": "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\15 Ago\\SIRPSI_Proyecto\\SIRPSI\\SIRPSI.csproj",
+      "projectPath": "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\oct 17\\SIRPSI_Proyecto\\SIRPSI\\SIRPSI.csproj",
       "packagesPath": "C:\\Users\\JHON\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\15 Ago\\SIRPSI_Proyecto\\SIRPSI\\obj\\",
+      "outputPath": "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\oct 17\\SIRPSI_Proyecto\\SIRPSI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -7450,14 +7450,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\15 Ago\\SIRPSI_Proyecto\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\15 Ago\\SIRPSI_Proyecto\\DataAccess\\DataAccess.csproj"
+            "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\oct 17\\SIRPSI_Proyecto\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\oct 17\\SIRPSI_Proyecto\\DataAccess\\DataAccess.csproj"
             },
-            "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\15 Ago\\SIRPSI_Proyecto\\EmailServices\\EmailServices.csproj": {
-              "projectPath": "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\15 Ago\\SIRPSI_Proyecto\\EmailServices\\EmailServices.csproj"
+            "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\oct 17\\SIRPSI_Proyecto\\EmailServices\\EmailServices.csproj": {
+              "projectPath": "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\oct 17\\SIRPSI_Proyecto\\EmailServices\\EmailServices.csproj"
             },
-            "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\15 Ago\\SIRPSI_Proyecto\\MessengerServices\\MessengerServices.csproj": {
-              "projectPath": "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\15 Ago\\SIRPSI_Proyecto\\MessengerServices\\MessengerServices.csproj"
+            "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\oct 17\\SIRPSI_Proyecto\\MessengerServices\\MessengerServices.csproj": {
+              "projectPath": "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\oct 17\\SIRPSI_Proyecto\\MessengerServices\\MessengerServices.csproj"
             }
           }
         }

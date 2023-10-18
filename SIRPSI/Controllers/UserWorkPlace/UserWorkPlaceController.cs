@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using DataAccess.Context;
 using DataAccess.Models.Estados;
+using DataAccess.Models.PsychologistsCenterWork;
 using DataAccess.Models.Users;
 using DataAccess.Models.WorkPlace;
 using EmailServices;
@@ -63,7 +64,7 @@ namespace SIRPSI.Controllers.WorkPlace
         public async Task<ActionResult<object>> Get(string? user)
         {
             var centrosDeTrabajoUsuario = (from data in (await context.centroTrabajo.ToListAsync())
-                                           where data.IdUsuario == user
+                                           where context.psicologosCentroTrabajo.Where(x => x.IdCentroTrabajo == data.Id && x.IdUser == user).Count() > 0
                                            select new CentroTrabajo
                                            {
                                                Id = data.Id,
@@ -78,16 +79,16 @@ namespace SIRPSI.Controllers.WorkPlace
                                                IdUsuario = data.IdUsuario,
                                                Empresa = (context.empresas.Where(x => x.Id == data.IdEmpresa)).FirstOrDefault(),
                                                Estados = (context.estados.Where(x => x.Id == data.IdEstado)).FirstOrDefault(),
-                                               Usuario = (context.AspNetUsers.Where(x => x.Id == data.IdUsuario)).FirstOrDefault(),
+                                               //Usuario = (context.AspNetUsers.Where(x => x.Id == data.IdUsuario)).FirstOrDefault(),
                                            }).ToList();
             return centrosDeTrabajoUsuario;
         }
 
         [HttpGet("ConsultarUsuariosCentroDeTrabajo")]
-        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public async Task<ActionResult<object>> GetByWorkCenter(string? workCenter)
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult<object>> GetByWorkCenter(string? workCenter = null)
         {
-            var usersWorkCenter = (from data in await context.userWorkPlace.Where(x => x.WorkPlaceId == workCenter).ToListAsync()
+            var usersWorkCenter = (from data in await context.userWorkPlace.Where(x => (workCenter != null ? x.WorkPlaceId == workCenter : 1 == 1)).ToListAsync()
                                    select new ConsultarUsuariosCentroTrabajo()
                                    {
                                        WorkplaceId = data.WorkPlaceId,
@@ -113,6 +114,7 @@ namespace SIRPSI.Controllers.WorkPlace
                                            estado = (context.estados.Where(x => x.Id == data.User.Status).FirstOrDefault()),
                                            IdRol = data.User.IdRol,
                                            role = (context.Roles.Where(x => x.Id == data.User.IdRol).FirstOrDefault()),
+                                           trabajadorCentroTrabajo = (context.userWorkPlace.Where(x => x.UserId == data.User.Id).FirstOrDefault())
                                        }).ToList();
 
             return Ok(usuariosConsultados);
@@ -124,34 +126,65 @@ namespace SIRPSI.Controllers.WorkPlace
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult> Post([FromBody] RegistrarCentroTrabajoUsuario registrarCentroTrabajoUsuario)
         {
-            var userWorkCenter = await context.userWorkPlace.Where(x => x.UserId == registrarCentroTrabajoUsuario.User && x.WorkPlaceId == registrarCentroTrabajoUsuario.Workplace).FirstOrDefaultAsync();
-            if (userWorkCenter != null)
+            try
             {
-                //Visualizacion de mensajes al usuario del aplicativo
-                return NotFound(new General()
+                var identity = HttpContext.User.Identity as ClaimsIdentity;
+                if (identity != null)
                 {
-                    title = "Asignar centro de trabajo",
-                    status = 404,
-                    message = "Este usuario ya esta asignado a ese centro de trabajo"
+                    IEnumerable<Claim> claims = identity.Claims;
+                }
+                var documento = identity.FindFirst("documento").Value.ToString();
+                var usuario = context.AspNetUsers.Where(u => u.Document.Equals(documento)).FirstOrDefault();
+
+                var userWorkCenter = await context.userWorkPlace.Where(x => x.UserId == registrarCentroTrabajoUsuario.User && x.WorkPlaceId == registrarCentroTrabajoUsuario.Workplace).FirstOrDefaultAsync();
+                if (userWorkCenter != null)
+                {
+                    //Visualizacion de mensajes al usuario del aplicativo
+                    return NotFound(new General()
+                    {
+                        title = "Asignar centro de trabajo",
+                        status = 404,
+                        message = "Este usuario ya esta asignado a ese centro de trabajo"
+                    });
+                }
+                var centroTrabajoUser = mapper.Map<UserWorkPlace>(registrarCentroTrabajoUsuario);
+                //Valores asignados
+                centroTrabajoUser.Id = Guid.NewGuid().ToString();
+                centroTrabajoUser.UserId = registrarCentroTrabajoUsuario.User;
+                centroTrabajoUser.WorkPlaceId = registrarCentroTrabajoUsuario.Workplace;
+
+                //Agregar datos al contexto
+                context.Add(centroTrabajoUser);
+                context.centroTrabajoHistorial.Add(new CentroTrabajoHistorial()
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    IdUser = centroTrabajoUser.UserId,
+                    IdCentroTrabajo = centroTrabajoUser.WorkPlaceId,
+                    Fecha = DateTime.Now,
+                    UserRegister = usuario.Id,
+                    IdEstado = "fc6b0f2f-0641-40e5-b7ac-3eed551f5531",
+                    Tipo = 2,
+                });
+                //Guardado de datos 
+                await context.SaveChangesAsync();
+                return Created("", new General()
+                {
+                    //Visualizacion de mensajes al usuario del aplicativo
+                    title = "Registrar centro de trabajo",
+                    status = 201,
+                    message = "Centro de trabajo creado"
                 });
             }
-            var centroTrabajoUser = mapper.Map<UserWorkPlace>(registrarCentroTrabajoUsuario);
-            //Valores asignados
-            centroTrabajoUser.Id = Guid.NewGuid().ToString();
-            centroTrabajoUser.UserId = registrarCentroTrabajoUsuario.User;
-            centroTrabajoUser.WorkPlaceId = registrarCentroTrabajoUsuario.Workplace;
-
-            //Agregar datos al contexto
-            context.Add(centroTrabajoUser);
-            //Guardado de datos 
-            await context.SaveChangesAsync();
-            return Created("", new General()
+            catch (Exception e)
             {
-                //Visualizacion de mensajes al usuario del aplicativo
-                title = "Registrar centro de trabajo",
-                status = 201,
-                message = "Centro de trabajo creado"
-            });
+                return Created("", new General()
+                {
+                    //Visualizacion de mensajes al usuario del aplicativo
+                    title = "Registrar centro de trabajo",
+                    status = 401,
+                    message = "Ha ocurrido un error inesperado"
+                });
+            }
         }
         #endregion
 
@@ -162,6 +195,14 @@ namespace SIRPSI.Controllers.WorkPlace
         {
             try
             {
+                var identity = HttpContext.User.Identity as ClaimsIdentity;
+                if (identity != null)
+                {
+                    IEnumerable<Claim> claims = identity.Claims;
+                }
+                var documento = identity.FindFirst("documento").Value.ToString();
+                var usuario = context.AspNetUsers.Where(u => u.Document.Equals(documento)).FirstOrDefault();
+
                 var centrosDeTrabajo = await context.userWorkPlace.Where(x => x.WorkPlaceId == centroTrabajo && x.UserId == user).FirstOrDefaultAsync();
                 if (centrosDeTrabajo == null)
                 {
@@ -173,6 +214,16 @@ namespace SIRPSI.Controllers.WorkPlace
                     });
                 }
                 context.userWorkPlace.Remove(centrosDeTrabajo);
+                context.centroTrabajoHistorial.Add(new CentroTrabajoHistorial()
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    IdUser = centrosDeTrabajo.UserId,
+                    IdCentroTrabajo = centrosDeTrabajo.WorkPlaceId,
+                    Fecha = DateTime.Now,
+                    UserRegister = usuario.Id,
+                    IdEstado = "62aea53c-ea76-4994-8d44-129936574bf5",
+                    Tipo = 2,
+                });
                 await context.SaveChangesAsync();
 
                 return Ok(new General()

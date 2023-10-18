@@ -9,5 +9,6 @@ namespace SIRPSI.DTOs.Document
         [Required(ErrorMessage = "El campo {0} es requerido")]
         public string? Nombre { get; set; }
         public string? Descripcion { get; set; }
+        public string TipoPersonaId { get; set; }
     }
 }

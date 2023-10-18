@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OSe4vT6wOOm140JYK2IbjUN4fUYFj1JeJ1bJKD6otE8HjYsqozlsQy0E1Muht3b6UPaqbdNJtHp7c2Wi6ZGMrA==",
+  "dgSpecHash": "B8zs2N7IJ5UTrbTyaGlqmuGsrrmNb5o0tM73GMD8x/V6JojRjJ1j7Crw4XtrTSNZGMMSS4NDEwBSh9kuKifKuQ==",
   "success": true,
-  "projectFilePath": "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\15 Ago\\SIRPSI_Proyecto\\MessengerServices\\MessengerServices.csproj",
+  "projectFilePath": "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\oct 17\\SIRPSI_Proyecto\\MessengerServices\\MessengerServices.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JHON\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.19.0\\microsoft.identitymodel.abstractions.6.19.0.nupkg.sha512",

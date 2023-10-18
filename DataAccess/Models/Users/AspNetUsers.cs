@@ -21,5 +21,10 @@ namespace DataAccess.Models.Users
         public string? UserModify { get; set; }
         public string? Discriminator { get; set; }
         public string? CodeActivation { get; set; }
+        public string? EmailAux { get; set; }
+        public string? PhoneNumberAux { get; set; }
+        public string? IdOccupationProfession { get; set; } = null;
+        public bool? HaveDisability { get; set; } = null;
+        public bool? ReadingWritingSkills { get; set; } = null;
     }
 }

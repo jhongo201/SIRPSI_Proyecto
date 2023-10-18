@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cVAhM1hA88X6VEc6Z2I4ojRXeuEupdDt7HnMGQ3vxSREnEKaQ8PGCQRuVb5DavyTTYff4ckCdGN5Fmtm+4P9Ow==",
+  "dgSpecHash": "oey4cQHCTyo0B/IoZdnPIq1WQm2ps8U7SK+L3DMywAtuU/+pJsTl6/FZkmbxg4G7asj+KQ/W+cAhyhIkm6IYlg==",
   "success": true,
-  "projectFilePath": "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\15 Ago\\SIRPSI_Proyecto\\SIRPSI\\SIRPSI.csproj",
+  "projectFilePath": "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\oct 17\\SIRPSI_Proyecto\\SIRPSI\\SIRPSI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JHON\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

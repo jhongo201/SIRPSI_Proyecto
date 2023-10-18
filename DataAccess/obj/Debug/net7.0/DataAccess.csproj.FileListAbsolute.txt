@@ -26,17 +26,45 @@ C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\refint\DataAc
 C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.pdb
 C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.genruntimeconfig.cache
 C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\ref\DataAccess.dll
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.deps.json
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.runtimeconfig.json
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.dll
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.pdb
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.csproj.AssemblyReference.cache
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfoInputs.cache
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfo.cs
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.csproj.CoreCompileInputs.cache
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.dll
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\refint\DataAccess.dll
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.pdb
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.genruntimeconfig.cache
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\ref\DataAccess.dll
+C:\Projects\S\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.deps.json
+C:\Projects\S\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.runtimeconfig.json
+C:\Projects\S\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.dll
+C:\Projects\S\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.pdb
+C:\Projects\S\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.csproj.AssemblyReference.cache
+C:\Projects\S\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\S\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfoInputs.cache
+C:\Projects\S\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfo.cs
+C:\Projects\S\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Projects\S\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.dll
+C:\Projects\S\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\refint\DataAccess.dll
+C:\Projects\S\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.pdb
+C:\Projects\S\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.genruntimeconfig.cache
+C:\Projects\S\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\ref\DataAccess.dll
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfo.cs
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.dll
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\refint\DataAccess.dll
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.pdb
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.deps.json
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.runtimeconfig.json
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.dll
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.pdb
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.genruntimeconfig.cache
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\ref\DataAccess.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.deps.json
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.runtimeconfig.json
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.pdb
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.csproj.AssemblyReference.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfoInputs.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfo.cs
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\refint\DataAccess.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.pdb
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.genruntimeconfig.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\ref\DataAccess.dll

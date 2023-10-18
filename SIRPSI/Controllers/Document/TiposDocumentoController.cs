@@ -56,7 +56,7 @@ namespace SIRPSI.Controllers.Document
 
         #region Consulta
         [HttpGet("ConsultarTipoDocumento", Name = "consultarTipoDocumento")]
-        public async Task<ActionResult<object>> Get()
+        public async Task<ActionResult<object>> Get(string? idTipoPersona = null)
         {
             try
             {
@@ -123,40 +123,43 @@ namespace SIRPSI.Controllers.Document
                 //Si es permitido
                 //if (true)
                 //{
-                    //Consultar estados
-                    var estado = await context.estados.Where(x => x.IdConsecutivo.Equals(1)).FirstOrDefaultAsync();
+                //Consultar estados
+                var estado = await context.estados.Where(x => x.IdConsecutivo.Equals(1)).FirstOrDefaultAsync();
 
-                    if (estado == null)
+                if (estado == null)
+                {
+                    return NotFound(new General()
                     {
-                        return NotFound(new General()
-                        {
-                            title = "Consultar tipo documento",
-                            status = 404,
-                            message = "Estado no encontrado"
-                        });
-                    }
-                    //Consulta el tipo documento
-                    var tipoEmpresa = context.tiposDocumento.Where(x => x.IdEstado.Equals(estado.Id)).Select(x => new
-                    {
-                        x.Id,
-                        x.Nombre,
-                        x.Descripcion,
-                        x.IdEstado
-                    }).ToList();
+                        title = "Consultar tipo documento",
+                        status = 404,
+                        message = "Estado no encontrado"
+                    });
+                }
+                //Consulta el tipo documento
+                var tipoEmpresa = context.tiposDocumento.Where(x => x.IdEstado.Equals(estado.Id)).Select(x => new
+                {
+                    x.Id,
+                    x.Nombre,
+                    x.Descripcion,
+                    x.IdEstado,
+                    x.TipoPersonaId
+                }).ToList();
 
-                    if (tipoEmpresa == null)
-                    {
-                        //Visualizacion de mensajes al usuario del aplicativo
-                        return NotFound(new General()
-                        {
-                            title = "Consultar tipo documento",
-                            status = 404,
-                            message = "Tipo documento no encontrada"
-                        });
-                    }
+                if (idTipoPersona != null) tipoEmpresa = tipoEmpresa.Where(x => x.TipoPersonaId == idTipoPersona).ToList();
 
-                    //Retorno de los datos encontrados
-                    return tipoEmpresa;
+                if (tipoEmpresa == null)
+                {
+                    //Visualizacion de mensajes al usuario del aplicativo
+                    return NotFound(new General()
+                    {
+                        title = "Consultar tipo documento",
+                        status = 404,
+                        message = "Tipo documento no encontrada"
+                    });
+                }
+
+                //Retorno de los datos encontrados
+                return tipoEmpresa;
                 //}
                 //else
                 //{
@@ -411,6 +414,7 @@ namespace SIRPSI.Controllers.Document
                             r.Nombre = actualizarTipoDocumento.Nombre;
                             r.Descripcion = actualizarTipoDocumento.Descripcion;
                             r.UsuarioModifico = usuario.Document;
+                            r.TipoPersonaId = actualizarTipoDocumento.TipoPersonaId;
                             r.FechaModifico = DateTime.Now.ToDateTimeZone().DateTime;
                         });
 

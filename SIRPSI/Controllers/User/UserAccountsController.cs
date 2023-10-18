@@ -203,13 +203,13 @@ namespace SIRPSI.Controllers.User
                 userNet.Status = userCredentials.IdEstado;
                 userNet.Id = Guid.NewGuid().ToString();
 
-                if (emailValidation != "mintrabajo" && validarionRoleEspecial != null)
+                if (emailValidation != "ministerio" && validarionRoleEspecial != null)
                 {
                     return BadRequest(new General()
                     {
                         title = "usuario",
                         status = 400,
-                        message = "El email no tiene el dominio correcto (Ejm: mintrabajo.gov.co)."
+                        message = "El email no tiene el dominio correcto (Ejm: ministerio.xxx.xx)."
                     });
                 }
 
@@ -228,6 +228,11 @@ namespace SIRPSI.Controllers.User
                 var result = await userManager.CreateAsync(userNet, userCredentials.Password);
                 if (result.Succeeded)
                 {
+                    if (userCredentials.IdWorkCenter != null)
+                    {
+                        context.userWorkPlace.Add(new DataAccess.Models.WorkPlace.UserWorkPlace() { Id = Guid.NewGuid().ToString(), UserId = userNet.Id, WorkPlaceId = userCredentials.IdWorkCenter });
+                        await context.SaveChangesAsync();
+                    }
                     logger.LogInformation("Registro de usuario ¡Exitoso!");
                     return await BuildToken(userCredentials);
                 }
@@ -520,7 +525,7 @@ namespace SIRPSI.Controllers.User
             try
             {
                 //Consulta estados
-                var estados = await context.estados.Select(x => new { x.Id, x.IdConsecutivo }).Where(x => x.IdConsecutivo.Equals(1) || x.IdConsecutivo.Equals(2)).Select(x => x.Id).ToListAsync();
+                var estados = await context.estados.Select(x => new { x.Id, x.IdConsecutivo }).Where(x => x.IdConsecutivo.Equals(1) || x.IdConsecutivo.Equals(3) || x.IdConsecutivo.Equals(9)).Select(x => x.Id).ToListAsync();
                 //Consulta empresa
                 var empresa = await context.empresas.Where(x => x.Documento.Equals(userCredentials.IdCompany) && x.IdEstado == statusSettings.Activo).ToListAsync();
                 if (empresa == null)
@@ -534,8 +539,8 @@ namespace SIRPSI.Controllers.User
                 var existUser = await context.AspNetUsers
                     .Where(x => x.Document.Equals(userCredentials.Document) && estados.Contains(x.Status)).FirstOrDefaultAsync();
 
-                existUser = empresa.Where(x => x.Id == existUser.IdCompany).FirstOrDefault() == null ? null : existUser;
-                if (existUser == null || existUser.Status != statusSettings.Activo)
+                if(existUser != null) existUser = empresa.Where(x => x.Id == existUser.IdCompany).FirstOrDefault() == null ? null : existUser;
+                if (existUser == null || !estados.Contains(existUser.Status))
                 {
                     return BadRequest(new General()
                     {
@@ -556,7 +561,7 @@ namespace SIRPSI.Controllers.User
                     userCredentials.IdCompany = "";
                 }
                 var email = existUser.Email.Trim() != null ? existUser.Email.Trim() : "";
-                var result = await signInManager.PasswordSignInAsync(email,
+                var result = await signInManager.PasswordSignInAsync(existUser,
                 userCredentials.Password, isPersistent: false, lockoutOnFailure: false);
                 //var userId = userManager.FindByIdAsync();
                 userCredentials.IdRol = existUser.IdRol;
@@ -564,6 +569,7 @@ namespace SIRPSI.Controllers.User
                 userCredentials.Names = existUser.Names;
                 userCredentials.Surnames = existUser.Surnames;
                 userCredentials.IdCompany = existUser.IdCompany;
+                userCredentials.Email = existUser.Email;
                 userCredentials.Role = context.AspNetRoles.Where(x => x.Id == existUser.IdRol).First().Name;
                 if (result.Succeeded)
                 {
@@ -745,7 +751,6 @@ namespace SIRPSI.Controllers.User
         #endregion
 
         #region Recuperar constraseña
-
         [HttpPost("RecoverPassword")]
         public async Task<ActionResult<General>> RecoverPassword(RecoverPassword recoverPassword)
         {
@@ -822,7 +827,6 @@ namespace SIRPSI.Controllers.User
         #endregion
 
         #region Activar usuario
-
         [HttpPost("ActivateUser")]
         public async Task<ActionResult<General>> ActivateUser(ActivateUserRequest activateUserRequest)
         {
@@ -952,6 +956,158 @@ namespace SIRPSI.Controllers.User
                 });
             }
 
+        }
+        #endregion
+
+        #region Change data user
+        [HttpPost("ChangePassword")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult<General>> ChangePassword(ChangePassword changePassword)
+        {
+            if (changePassword.NewPassword != changePassword.ConfirmPassword)
+            {
+                return BadRequest(new General()
+                {
+                    title = "usuario",
+                    status = 400,
+                    message = "Contraseñas ingresadas no coinciden"
+                });
+            }
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+            if (identity != null)
+            {
+                IEnumerable<Claim> claims = identity.Claims;
+            }
+            var documento = identity.FindFirst("documento").Value.ToString();
+            var roles = identity.FindFirst("rol").Value.ToString();
+            var user = context.AspNetUsers.Where(u => u.Document.Equals(documento)).FirstOrDefault();
+            if (user == null)
+            {
+                return NotFound(new General()
+                {
+                    title = "Actualizar empresa",
+                    status = 404,
+                    message = "Usuario no encontrado"
+                });
+            }
+            var validationNewPassword = new Microsoft.AspNetCore.Identity.PasswordHasher<IdentityUser>().VerifyHashedPassword(user, user.PasswordHash, changePassword.NewPassword);
+            if (validationNewPassword == PasswordVerificationResult.Success)
+            {
+                return BadRequest(new General()
+                {
+                    title = "usuario",
+                    status = 400,
+                    message = "La contraseña debe ser diferente a la registrada anteriomente."
+                });
+            }
+            var isCorrectPwd = await userManager.ChangePasswordAsync(user, changePassword.OldPassword, changePassword.NewPassword);
+            if (isCorrectPwd.Succeeded)
+            {
+                var message = new Message(new string[] { user.Email }, "Cambio de contraseña. ", "Se ha realizado exitosamente el cambio de contraseña.");
+                await emailSender.SendEmailAsync(message);
+                return Ok(new General()
+                {
+                    title = "usuario",
+                    status = 200,
+                    message = "Cambio de contraseña, ¡exitoso!"
+
+                });
+            }
+            else
+            {
+                logger.LogError(isCorrectPwd.Errors.Select(x => x.Description).First());
+                var errorsDescripcion = "";
+                var index = 0;
+                foreach (var item in isCorrectPwd.Errors)
+                    errorsDescripcion += (index != 0 ? "\n\n" : "") + item.Description;
+
+                return BadRequest(new General()
+                {
+                    title = "usuario",
+                    status = 400,
+                    message = "Ha ocurrido un error con el cambio de contraseña: " + errorsDescripcion
+                });
+            }
+        }
+
+        [HttpPost("ChangeEmail")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult<General>> ChangeEmail(ChangeEmail changeEmail)
+        {
+            if (changeEmail.NewEmail != changeEmail.ConfirmEmail)
+            {
+                return BadRequest(new General()
+                {
+                    title = "usuario",
+                    status = 400,
+                    message = "Correos ingresadas no coinciden"
+                });
+            }
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+            if (identity != null)
+            {
+                IEnumerable<Claim> claims = identity.Claims;
+            }
+            var documento = identity.FindFirst("documento").Value.ToString();
+            var roles = identity.FindFirst("rol").Value.ToString();
+            var user = context.AspNetUsers.Where(u => u.Document.Equals(documento)).FirstOrDefault();
+            if (user == null)
+            {
+                return NotFound(new General()
+                {
+                    title = "Actualizar email",
+                    status = 404,
+                    message = "Usuario no encontrado"
+                });
+            }
+            if (user.Email == changeEmail.NewEmail)
+            {
+                return NotFound(new General()
+                {
+                    title = "Actualizar email",
+                    status = 404,
+                    message = "Debe ingresar un correo distinto al que ya tiene registrado"
+                });
+            }
+            var validationExist = context.AspNetUsers.Where(u => u.Email.Equals(changeEmail.NewEmail)).FirstOrDefault();
+            if (validationExist != null)
+            {
+                return NotFound(new General()
+                {
+                    title = "Actualizar email",
+                    status = 404,
+                    message = "Este correo ya esta en uso"
+                });
+            }
+            var token = await userManager.GenerateChangeEmailTokenAsync(user, changeEmail.NewEmail);
+            var isCorrectPwd = await userManager.ChangeEmailAsync(user, changeEmail.NewEmail, token);
+            if (isCorrectPwd.Succeeded)
+            {
+                var message = new Message(new string[] { user.Email }, "Cambio de email. ", "Se ha realizado exitosamente el cambio de correo electronico.");
+                await emailSender.SendEmailAsync(message);
+                return Ok(new General()
+                {
+                    title = "usuario",
+                    status = 200,
+                    message = "Cambio de email, ¡exitoso!"
+
+                });
+            }
+            else
+            {
+                logger.LogError(isCorrectPwd.Errors.Select(x => x.Description).First());
+                var errorsDescripcion = "";
+                var index = 0;
+                foreach (var item in isCorrectPwd.Errors)
+                    errorsDescripcion += (index != 0 ? "\n\n" : "") + item.Description;
+
+                return BadRequest(new General()
+                {
+                    title = "usuario",
+                    status = 400,
+                    message = "Ha ocurrido un error con el cambio de correo: " + errorsDescripcion
+                });
+            }
         }
         #endregion
     }

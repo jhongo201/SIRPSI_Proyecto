@@ -28,7 +28,7 @@ namespace SIRPSI
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsApi",
-                    builder => builder.WithOrigins("http://172.20.44.143:8091")
+                    builder => builder.WithOrigins(Configuration["UrlService"])
                     .AllowAnyHeader()
                     .AllowAnyMethod());
             });

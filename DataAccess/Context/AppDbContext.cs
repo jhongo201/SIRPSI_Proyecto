@@ -17,6 +17,18 @@ using DataAccess.Models.Module;
 using DataAccess.Models.WorkPlace;
 using DataAccess.Models.ModuleUserRole;
 using DataAccess.Models.Variables;
+using DataAccess.Models.TypesPerson;
+using DataAccess.Models.TaxRegimes;
+using DataAccess.Models.EconomicActivity;
+using DataAccess.Models.EconomicSectors;
+using Microsoft.EntityFrameworkCore.Metadata;
+using DataAccess.Models.OccupationProfession;
+using DataAccess.Models.PsychologistsCenterWork;
+using DataAccess.Models.Reports;
+using DataAccess.Models.ReportsRole;
+using DataAccess.Models.OccupationalLicense;
+using DataAccess.Models.RepresentativeCompany;
+using DataAccess.Models.PsychosocialEvaluation;
 
 namespace DataAccess.Context
 {
@@ -29,7 +41,7 @@ namespace DataAccess.Context
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-
+            builder.Entity<Empresas>().Property(u => u.IdConsecutivo).Metadata.SetAfterSaveBehavior(PropertySaveBehavior.Ignore);
         }
 
         public DbSet<AspNetUsers> AspNetUsers { get; set; }
@@ -47,6 +59,18 @@ namespace DataAccess.Context
         public DbSet<UserWorkPlace> userWorkPlace { get; set; }
         public DbSet<ModuloUserRole> moduloUserRole { get; set; }
         public DbSet<Variables> variables { get; set; }
+        public DbSet<TiposPersona> tiposPersona { get; set; }
+        public DbSet<RegimenesTributario> regimenesTributario { get; set; }
+        public DbSet<ActividadEconomica> actividadEconomica { get; set; }
+        public DbSet<SectoresEconomicos> sectoresEconomicos { get; set; }
+        public DbSet<OcupacionProfesion> ocupacionProfesion { get; set; }
+        public DbSet<PsicologosCentroTrabajo> psicologosCentroTrabajo { get; set; }
+        public DbSet<CentroTrabajoHistorial> centroTrabajoHistorial { get; set; }
+        public DbSet<Reportes> reportes { get; set; }
+        public DbSet<ReportesRole> reportesRole { get; set; }
+        public DbSet<EvaluacionPsicosocialUsuario> evaluacionPsicosocialUsuario { get; set; }
+        public DbSet<LicenciaOcupacional> licenciaOcupacional { get; set; }
+        public DbSet<RepresentanteEmpresa> representanteEmpresa { get; set; }
 
         //private void SeeData(ModelBuilder modelBuilder)
         //{

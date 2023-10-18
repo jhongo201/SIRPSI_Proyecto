@@ -6,7 +6,10 @@ using DataAccess.Models.Estados;
 using DataAccess.Models.Ministry;
 using DataAccess.Models.Module;
 using DataAccess.Models.ModuleUserRole;
+using DataAccess.Models.OccupationalLicense;
 using DataAccess.Models.Permissions;
+using DataAccess.Models.PsychosocialEvaluation;
+using DataAccess.Models.RepresentativeCompany;
 using DataAccess.Models.Rols;
 using DataAccess.Models.Status;
 using DataAccess.Models.Users;
@@ -18,6 +21,9 @@ using SIRPSI.DTOs.Document;
 using SIRPSI.DTOs.Ministry;
 using SIRPSI.DTOs.Module;
 using SIRPSI.DTOs.ModuleUserRole;
+using SIRPSI.DTOs.OccupationalLicense;
+using SIRPSI.DTOs.PsychosocialEvaluation;
+using SIRPSI.DTOs.RepresentativeCompany;
 using SIRPSI.DTOs.Status;
 using SIRPSI.DTOs.User;
 using SIRPSI.DTOs.User.Roles;
@@ -40,6 +46,7 @@ namespace SIRPSI.Helpers
             #region Usuario
             //Mapeo de la clase usuario
             CreateMap<AspNetUsers, UserCredentials>().ReverseMap();
+            CreateMap<AspNetUsers, User>().ReverseMap();
 
             CreateMap<PermisosXUsuario, ConsultarPermisosUsuario>().ReverseMap();
             CreateMap<PermisosXUsuario, RegistrarPermisosUsuario>().ReverseMap();
@@ -77,6 +84,7 @@ namespace SIRPSI.Helpers
 
             CreateMap<Empresas, ConsultarEmpresas>().ReverseMap();
             CreateMap<Empresas, RegistrarEmpresas>().ReverseMap();
+            CreateMap<Empresas, EmpresasAct>().ReverseMap();
             CreateMap<Empresas, ActualizarEmpresas>().ReverseMap();
             CreateMap<Empresas, EliminarEmpresas>().ReverseMap();
 
@@ -130,11 +138,28 @@ namespace SIRPSI.Helpers
             #endregion
 
             #region Centros de trabajo
-            CreateMap<CentroTrabajo,ConsultarCentroTrabajo>().ReverseMap();
+            CreateMap<CentroTrabajo, ConsultarCentroTrabajo>().ReverseMap();
             CreateMap<CentroTrabajo, RegistrarCentroTrabajo>().ReverseMap();
+            CreateMap<CentroTrabajo, CentroTrabajoAct>().ReverseMap();
             CreateMap<UserWorkPlace, RegistrarCentroTrabajoUsuario>().ReverseMap();
             #endregion
 
+            #region Evaluacion
+            CreateMap<EvaluacionPsicosocialUsuario, ConsultarEvaluacionPsicosocial>().ReverseMap();
+            CreateMap<EvaluacionPsicosocialUsuario, RegistrarEvaluacionPsicosocial>().ReverseMap();
+            CreateMap<EvaluacionPsicosocialUsuario, RegistrarEvaluacionPsicosocial>().ReverseMap();
+            CreateMap<EvaluacionPsicosocialUsuario, RegistrarEvaluacionPsicosocial>().ReverseMap();
+            #endregion
+
+            #region Licencia ocupacional
+            CreateMap<LicenciaOcupacional, ConsultarLicenciaOcupacional>().ReverseMap();
+            CreateMap<LicenciaOcupacional, ActualizarLicenciaOcupacional>().ReverseMap();
+            #endregion
+
+            #region Representante de empresa
+            CreateMap<RepresentanteEmpresa, ConsultarRepresentanteEmpresa>().ReverseMap();
+            CreateMap<RepresentanteEmpresa, RegistrarRepresentanteEmpresa>().ReverseMap();
+            #endregion
         }
     }
 }

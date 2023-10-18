@@ -28,5 +28,7 @@ namespace DataAccess.Models.Documents
         public DateTime? FechaModifico { get; set; }
 
         public string? UsuarioModifico { get; set; }
+
+        public string? TipoPersonaId { get; set; }
     }
 }

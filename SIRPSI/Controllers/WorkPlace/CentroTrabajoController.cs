@@ -16,8 +16,10 @@ using Microsoft.EntityFrameworkCore;
 using SIRPSI.Core.Helper;
 using SIRPSI.DTOs.Companies;
 using SIRPSI.DTOs.Status;
+using SIRPSI.DTOs.User;
 using SIRPSI.DTOs.WorkPlace;
 using SIRPSI.Helpers.Answers;
+using SIRPSI.Settings;
 using System.Security.Claims;
 
 namespace SIRPSI.Controllers.WorkPlace
@@ -35,6 +37,7 @@ namespace SIRPSI.Controllers.WorkPlace
         private readonly ILoggerManager logger;
         private readonly IMapper mapper;
         private readonly IEmailSender emailSender;
+        private readonly StatusSettings statusSettings;
 
         //Constructor 
         public CentroTrabajoController(AppDbContext context,
@@ -43,7 +46,8 @@ namespace SIRPSI.Controllers.WorkPlace
             SignInManager<IdentityUser> signInManager,
             ILoggerManager logger,
             IMapper mapper,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            StatusSettings statusSettings)
         {
             this.context = context;
             this.configuration = configuration;
@@ -52,6 +56,7 @@ namespace SIRPSI.Controllers.WorkPlace
             this.logger = logger;
             this.mapper = mapper;
             this.emailSender = emailSender;
+            this.statusSettings = statusSettings;
         }
         #endregion
 
@@ -62,8 +67,8 @@ namespace SIRPSI.Controllers.WorkPlace
         {
             try
             {
-                //Consulta el estados
-                var centrosDeTrabajo = (from data in (await context.centroTrabajo.ToListAsync())
+                string[] statusNot = new string[] { "10b28980-jhbd-4dc2-11db-57f4c8780b67", "c22caee5-aba0-4bd8-abf3-cff6305df919" };
+                var centrosDeTrabajo = (from data in (await context.centroTrabajo.Where(x => !statusNot.Contains(x.IdEstado)).ToListAsync())
                                         select new CentroTrabajo
                                         {
                                             Id = data.Id,
@@ -76,6 +81,12 @@ namespace SIRPSI.Controllers.WorkPlace
                                             FechaRegistro = data.FechaRegistro,
                                             IdEstado = data.IdEstado,
                                             IdUsuario = data.IdUsuario,
+                                            IdDepartamento = data.IdDepartamento,
+                                            IdMunicipio = data.IdMunicipio,
+                                            Direccion = data.Direccion,
+                                            Email = data.Email,
+                                            Telefono = data.Telefono,
+                                            Celular = data.Celular,
                                             Empresa = (context.empresas.Where(x => x.Id == data.IdEmpresa)).FirstOrDefault(),
                                             Estados = (context.estados.Where(x => x.Id == data.IdEstado)).FirstOrDefault(),
                                             Usuario = (context.AspNetUsers.Where(x => x.Id == data.IdUsuario)).FirstOrDefault(),
@@ -312,6 +323,12 @@ namespace SIRPSI.Controllers.WorkPlace
                         r.UsuarioRegistro = actualizarCentroTrabajo.UsuarioRegistro;
                         r.IdUsuario = actualizarCentroTrabajo.IdUsuario;
                         r.IdEmpresa = actualizarCentroTrabajo.IdEmpresa;
+                        r.IdDepartamento = actualizarCentroTrabajo.IdDepartamento;
+                        r.IdMunicipio = actualizarCentroTrabajo.IdMunicipio;
+                        r.Direccion = actualizarCentroTrabajo.Direccion;
+                        r.Email = actualizarCentroTrabajo.Email;
+                        r.Telefono = actualizarCentroTrabajo.Telefono;
+                        r.Celular = actualizarCentroTrabajo.Celular;
                     });
             await context.SaveChangesAsync();
             return Ok(new General()
@@ -320,6 +337,74 @@ namespace SIRPSI.Controllers.WorkPlace
                 status = 200,
                 message = "Empresa actualizada"
             });
+        }
+        #endregion
+
+        #region Eliminar
+        [HttpDelete("EliminarCentroTrabajo")]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult> Delete([FromBody] EliminarCentroTrabajo eliminarCentroTrabajo)
+        {
+            try
+            {
+                var identity = HttpContext.User.Identity as ClaimsIdentity;
+                if (identity != null)
+                {
+                    IEnumerable<Claim> claims = identity.Claims;
+                }
+                var documento = identity.FindFirst("documento").Value.ToString();
+                var usuario = context.AspNetUsers.Where(u => u.Document.Equals(documento)).FirstOrDefault();
+
+                if (usuario == null)
+                    return NotFound(new General()
+                    {
+                        title = "Eliminar centro de trabajo",
+                        status = 404,
+                        message = "Usuario no encontrado"
+                    });
+
+                var existeRol = context.centroTrabajo.Where(x => x.Id.Equals(eliminarCentroTrabajo.Id)).FirstOrDefault();
+                if (existeRol == null)
+                    return NotFound(new General()
+                    {
+                        title = "Eliminar centro de trabajo",
+                        status = 404,
+                        message = "Centro de trabajo no encontrado"
+                    });
+                var psicologos = context.psicologosCentroTrabajo.Where(x => x.IdCentroTrabajo.Equals(eliminarCentroTrabajo.Id)).Count();
+                var trabajadores = context.userWorkPlace.Where(x => x.WorkPlaceId.Equals(eliminarCentroTrabajo.Id)).Count();
+
+                if (psicologos > 0 || trabajadores > 0)
+                    return NotFound(new General()
+                    {
+                        title = "Eliminar centro de trabajo",
+                        status = 404,
+                        message = "No se puede eliminar el centro de trabajo hasta que no desvincule al Psicólogo Especialista SST y asigne a los trabajadores a otro centro de trabajo de la empresa."
+                    });
+
+                existeRol.IdEstado = this.statusSettings.Inactivo;
+                context.centroTrabajo.Update(existeRol);
+                await context.SaveChangesAsync();
+                return Ok(new General()
+                {
+                    //Visualizacion de mensajes al usuario del aplicativo
+                    title = "Eliminar centro de trabajo",
+                    status = 200,
+                    message = "centro de trabajo eliminado"
+                });
+            }
+            catch (Exception ex)
+            {
+                //Registro de errores
+                logger.LogError("Eliminar centro de trabajo " + ex.Message.ToString() + " - " + ex.StackTrace);
+                return BadRequest(new General()
+                {
+                    title = "Eliminar centro de trabajo",
+                    status = 400,
+                    message = "Contacte con el administrador del sistema"
+                });
+            }
+
         }
         #endregion
     }

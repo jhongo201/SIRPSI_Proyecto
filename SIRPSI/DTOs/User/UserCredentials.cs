@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.IdentityModel.Tokens;
+using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace SIRPSI.DTOs.User
 {
@@ -17,11 +19,17 @@ namespace SIRPSI.DTOs.User
         public string? Names { get; set; }
         public string? Surnames { get; set; }
         public string? Email { get; set; }
+        public string? EmailAux { get; set; }
         public string? PhoneNumber { get; set; }
+        public string? PhoneNumberAux { get; set; }
         public string? IdRol { get; set; }
         public string? IdEstado { get; set; }
         public string? Role { get; set; }
         public string? Id { get; set; }
+        public string? IdWorkCenter { get; set; } = null;
         public string? CodeActivation { get; set; }
+        public string? IdOccupationProfession { get; set; } = null;
+        public bool? HaveDisability { get; set; } = null;
+        public bool? ReadingWritingSkills { get; set; } = null;
     }
 }

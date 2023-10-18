@@ -10,15 +10,39 @@ C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\Messen
 C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\refint\MessengerServices.dll
 C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.pdb
 C:\Project\DiegoSIRPSI\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\ref\MessengerServices.dll
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\bin\Debug\net6.0\MessengerServices.deps.json
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\bin\Debug\net6.0\MessengerServices.dll
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\bin\Debug\net6.0\MessengerServices.pdb
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.csproj.AssemblyReference.cache
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.GeneratedMSBuildEditorConfig.editorconfig
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.AssemblyInfoInputs.cache
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.AssemblyInfo.cs
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.csproj.CoreCompileInputs.cache
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.dll
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\refint\MessengerServices.dll
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.pdb
-D:\Users\Jhon\Documentos\Proyecto\Diego\15 Ago\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\ref\MessengerServices.dll
+C:\Projects\S\SIRPSI_Proyecto\MessengerServices\bin\Debug\net6.0\MessengerServices.deps.json
+C:\Projects\S\SIRPSI_Proyecto\MessengerServices\bin\Debug\net6.0\MessengerServices.dll
+C:\Projects\S\SIRPSI_Proyecto\MessengerServices\bin\Debug\net6.0\MessengerServices.pdb
+C:\Projects\S\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.csproj.AssemblyReference.cache
+C:\Projects\S\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\S\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.AssemblyInfoInputs.cache
+C:\Projects\S\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.AssemblyInfo.cs
+C:\Projects\S\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.csproj.CoreCompileInputs.cache
+C:\Projects\S\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.dll
+C:\Projects\S\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\refint\MessengerServices.dll
+C:\Projects\S\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.pdb
+C:\Projects\S\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\ref\MessengerServices.dll
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\MessengerServices\bin\Debug\net6.0\MessengerServices.deps.json
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\MessengerServices\bin\Debug\net6.0\MessengerServices.dll
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\MessengerServices\bin\Debug\net6.0\MessengerServices.pdb
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.csproj.AssemblyReference.cache
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.AssemblyInfoInputs.cache
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.AssemblyInfo.cs
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.dll
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\refint\MessengerServices.dll
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.pdb
+C:\Users\user\Documents\Ebolc Company\ministerios\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\ref\MessengerServices.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\MessengerServices\bin\Debug\net6.0\MessengerServices.deps.json
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\MessengerServices\bin\Debug\net6.0\MessengerServices.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\MessengerServices\bin\Debug\net6.0\MessengerServices.pdb
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.csproj.AssemblyReference.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.AssemblyInfoInputs.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.AssemblyInfo.cs
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.csproj.CoreCompileInputs.cache
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\refint\MessengerServices.dll
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\MessengerServices.pdb
+D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\MessengerServices\obj\Debug\net6.0\ref\MessengerServices.dll

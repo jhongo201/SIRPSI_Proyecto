@@ -17,8 +17,11 @@ using SIRPSI.DTOs.User;
 using SIRPSI.DTOs.User.Usuario;
 using SIRPSI.Helpers.Answers;
 using SIRPSI.Settings;
+using System.Drawing;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Security.Claims;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SIRPSI.Controllers.User
 {
@@ -113,7 +116,7 @@ namespace SIRPSI.Controllers.User
 
         [HttpGet("ConsultarUsuariosEmpresa", Name = "consultarUsuariosEmpresa")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public async Task<ActionResult<object>> GetUserCompany()
+        public async Task<ActionResult<object>> GetUserCompany(string? status = null, int? type = 0, string? role = null)
         {
             try
             {
@@ -141,6 +144,7 @@ namespace SIRPSI.Controllers.User
                 //Consulta el tipo documento
                 var usuarioConsultado = (from data in (await context.AspNetUsers.ToListAsync())
                                          where data.IdCompany == (usuario.IdCompany == null || usuario.IdCompany == "" ? empresa.Id : usuario.IdCompany)
+                                         && (role == null ? 1 == 1 : data.IdRol == role)
                                          //&& data.Status == statusSettings.Inactivo
                                          select new ConsultarUsuarios()
                                          {
@@ -149,16 +153,32 @@ namespace SIRPSI.Controllers.User
                                              tipoDocumento = (context.tiposDocumento.Where(x => x.Id == data.TypeDocument).FirstOrDefault()),
                                              cedula = data.Document,
                                              correo = data.Email,
+                                             correoAux = data.EmailAux,
                                              telefono = data.PhoneNumber,
+                                             telefonoAux = data.PhoneNumberAux,
                                              idEmpresa = data.IdCompany,
                                              empresa = (context.empresas.Where(x => x.Id == data.IdCompany).FirstOrDefault()),
                                              nombreUsuario = data.Names,
                                              apellidosUsuario = data.Surnames,
+                                             habilidadesLectoEscritura = data.ReadingWritingSkills,
+                                             tieneDiscapacidad = data.HaveDisability,
                                              idEstado = data.Status,
+                                             IdPais = data.IdCountry,
+                                             pais = (context.pais.Where(x => x.Id == data.IdCountry).FirstOrDefault()),
                                              estado = (context.estados.Where(x => x.Id == data.Status).FirstOrDefault()),
                                              IdRol = data.IdRol,
                                              role = (context.Roles.Where(x => x.Id == data.IdRol).FirstOrDefault()),
+                                             IdOcupacionProfesion = data.IdOccupationProfession,
+                                             ocupacionProfesion = data.IdOccupationProfession != null ? (context.ocupacionProfesion.Where(x => x.Id == data.IdOccupationProfession).FirstOrDefault()) : null,
+                                             workPlaces = context.userWorkPlace.Where(x => x.UserId == data.Id).ToList()
                                          }).ToList();
+
+                if (type == 1) usuarioConsultado = usuarioConsultado.Where(x => x.idEstado == status).ToList();
+                else if (type == 2)
+                {
+                    string[] statusNot = new string[] { "10b28980-jhbd-4dc2-11db-57f4c8780b67", "c22caee5-aba0-4bd8-abf3-cff6305df919" };
+                    usuarioConsultado = usuarioConsultado.Where(x => !statusNot.Contains(x.idEstado)).ToList();
+                }
 
                 if (usuarioConsultado == null)
                 {
@@ -188,7 +208,7 @@ namespace SIRPSI.Controllers.User
 
         [HttpGet("ConsultarUsuariosEmpresaSinCentro", Name = "consultarUsuariosEmpresaSinCentro")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public async Task<ActionResult<object>> GetUserCompanyNotCenter(string? role = null)
+        public async Task<ActionResult<object>> GetUserCompanyNotCenter(string? role = null, int? workCenters = 1)
         {
             try
             {
@@ -216,7 +236,6 @@ namespace SIRPSI.Controllers.User
                 //Consulta el tipo documento
                 var usuarioConsultado = (from data in (await context.AspNetUsers.ToListAsync())
                                          where data.IdCompany == (usuario.IdCompany == null || usuario.IdCompany == "" ? empresa.Id : usuario.IdCompany)
-                                         && context.userWorkPlace.Where(x => x.UserId == data.Id).ToList().Count() == 0
                                          select new ConsultarUsuarios()
                                          {
                                              Id = data.Id,
@@ -233,35 +252,168 @@ namespace SIRPSI.Controllers.User
                                              estado = (context.estados.Where(x => x.Id == data.Status).FirstOrDefault()),
                                              IdRol = data.IdRol,
                                              role = (context.Roles.Where(x => x.Id == data.IdRol).FirstOrDefault()),
+                                             psicologosCentroTrabajo = (context.psicologosCentroTrabajo.Where(x => x.IdUser == data.Id).FirstOrDefault())
                                          }).ToList();
 
-            if (usuarioConsultado == null)
-            {
-                //Visualizacion de mensajes al usuario del aplicativo
-                return NotFound(new General()
+                if (usuarioConsultado == null)
                 {
-                    title = "Consultar usuario",
-                    status = 404,
-                    message = "Usuarios no encontrados"
-                });
-            }
+                    //Visualizacion de mensajes al usuario del aplicativo
+                    return NotFound(new General()
+                    {
+                        title = "Consultar usuario",
+                        status = 404,
+                        message = "Usuarios no encontrados"
+                    });
+                }
+                if (workCenters == 1)
+                    usuarioConsultado = usuarioConsultado.Where(y => context.userWorkPlace.Where(x => x.UserId == y.Id).ToList().Count() == 0).ToList();
+                else if (workCenters == 0)
+                    usuarioConsultado = usuarioConsultado.Where(y => context.psicologosCentroTrabajo.Where(x => x.IdUser == y.Id).ToList().Count() == 0).ToList();
                 if (role != null)
                     usuarioConsultado = usuarioConsultado.Where(x => x.IdRol == role).ToList();
-            //Retorno de los datos encontrados
-            return usuarioConsultado;
-        }
+                //Retorno de los datos encontrados
+                return usuarioConsultado;
+            }
             catch (Exception ex)
             {
                 //Registro de errores
                 logger.LogError("Consultar usuario " + ex.Message.ToString() + " - " + ex.StackTrace);
                 return BadRequest(new General()
-        {
-            title = "Consultar usuario",
+                {
+                    title = "Consultar usuario",
                     status = 400,
                     message = "Contacte con el administrador del sistema"
                 });
             }
-}
+        }
+
+        [HttpGet("ConsultarUsuarioDatos", Name = "consultarUsuarioDatos")]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult<object>> GetValidationUserApi([FromQuery] ValidarUsuarioRequest request)
+        {
+            try
+            {
+                List<UsuarioConsultado> Usuarios = new List<UsuarioConsultado>()
+                {
+                    new UsuarioConsultado()
+                    {
+                        TipoDocumento = "373a1d14-775b-48f7-b033-6f697401ad6c",
+                        Nombre = "Camilo Andres",
+                        Apellidos = "Rivas Orobio",
+                        Documento = "1017270383",
+                        FechaExpedicion = DateTime.Parse("30/05/2017")
+                    },
+                    new UsuarioConsultado()
+                    {
+                        TipoDocumento = "373a1d14-775b-48f7-b033-6f697401ad6c",
+                        Nombre = "Laura",
+                        Apellidos = "Morales",
+                        Documento = "1006123456",
+                        FechaExpedicion = DateTime.Parse("15/04/2000")
+                    },
+                    new UsuarioConsultado()
+                    {
+                        TipoDocumento = "373a1d14-775b-48f7-b033-6f697401ad6c",
+                        Nombre = "Joanthan Lion",
+                        Apellidos = "Puerta Rodriguez",
+                        Documento = "1122334455",
+                        FechaExpedicion = DateTime.Parse("15/04/2000")
+                    },
+                };
+                //Consulta el tipo documento
+                var usuarioConsultado = (from data in Usuarios
+                                         where data.TipoDocumento == request.TypeDocumentId &&
+                                            data.Documento == request.Document &&
+                                            data.FechaExpedicion.ToString("yyyyMMdd") == request.ExpeditionDate.ToString("yyyyMMdd")
+                                         select data).FirstOrDefault();
+
+                if (usuarioConsultado == null)
+                {
+                    //Visualizacion de mensajes al usuario del aplicativo
+                    return NotFound(new General()
+                    {
+                        title = "Consultar usuario",
+                        status = 404,
+                        message = "Usuarios no encontrado"
+                    });
+                }
+                //Retorno de los datos encontrados
+                return usuarioConsultado;
+            }
+            catch (Exception ex)
+            {
+                //Registro de errores
+                logger.LogError("Consultar usuario " + ex.Message.ToString() + " - " + ex.StackTrace);
+                return BadRequest(new General()
+                {
+                    title = "Consultar usuario",
+                    status = 400,
+                    message = "Contacte con el administrador del sistema"
+                });
+            }
+        }
+
+        [HttpGet("ConsultarUsuario", Name = "consultarUsuario")]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult<object>> GetById(string id)
+        {
+            try
+            {
+                //Consulta el tipo documento
+                var usuarioConsultado = (from data in (await context.AspNetUsers.ToListAsync())
+                                         where data.Id == id
+                                         select new ConsultarUsuarios()
+                                         {
+                                             Id = data.Id,
+                                             idTipoDocumento = data.TypeDocument,
+                                             tipoDocumento = (context.tiposDocumento.Where(x => x.Id == data.TypeDocument).FirstOrDefault()),
+                                             cedula = data.Document,
+                                             correo = data.Email,
+                                             correoAux = data.EmailAux,
+                                             telefono = data.PhoneNumber,
+                                             telefonoAux = data.PhoneNumberAux,
+                                             idEmpresa = data.IdCompany,
+                                             empresa = (context.empresas.Where(x => x.Id == data.IdCompany).FirstOrDefault()),
+                                             nombreUsuario = data.Names,
+                                             apellidosUsuario = data.Surnames,
+                                             habilidadesLectoEscritura = data.ReadingWritingSkills,
+                                             tieneDiscapacidad = data.HaveDisability,
+                                             idEstado = data.Status,
+                                             IdPais = data.IdCountry,
+                                             pais = (context.pais.Where(x => x.Id == data.IdCountry).FirstOrDefault()),
+                                             estado = (context.estados.Where(x => x.Id == data.Status).FirstOrDefault()),
+                                             IdRol = data.IdRol,
+                                             role = (context.Roles.Where(x => x.Id == data.IdRol).FirstOrDefault()),
+                                             IdOcupacionProfesion = data.IdOccupationProfession,
+                                             ocupacionProfesion = data.IdOccupationProfession != null ? (context.ocupacionProfesion.Where(x => x.Id == data.IdOccupationProfession).FirstOrDefault()) : null,
+                                             workPlaces = context.userWorkPlace.Where(x => x.UserId == data.Id).ToList()
+                                         }).FirstOrDefault();
+
+                if (usuarioConsultado == null)
+                {
+                    //Visualizacion de mensajes al usuario del aplicativo
+                    return NotFound(new General()
+                    {
+                        title = "Consultar usuario",
+                        status = 404,
+                        message = "Usuarios no encontrados"
+                    });
+                }
+                //Retorno de los datos encontrados
+                return usuarioConsultado;
+            }
+            catch (Exception ex)
+            {
+                //Registro de errores
+                logger.LogError("Consultar usuario " + ex.Message.ToString() + " - " + ex.StackTrace);
+                return BadRequest(new General()
+                {
+                    title = "Consultar usuario",
+                    status = 400,
+                    message = "Contacte con el administrador del sistema"
+                });
+            }
+        }
         #endregion
 
         #region Registro
@@ -398,8 +550,6 @@ namespace SIRPSI.Controllers.User
         //    }
         //}
         #endregion
-
-
 
         #region Eliminar
         //[HttpDelete("EliminarUusario")]
@@ -543,6 +693,59 @@ namespace SIRPSI.Controllers.User
         //    }
 
         //}
+        #endregion
+
+        #region Actualizar
+        [HttpPut("ActualizarUsuario")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult> Put(ActualizarUsuario actualizarUsuario)
+        {
+            try
+            {
+                var usuario = context.AspNetUsers.Where(u => u.Document.Equals(actualizarUsuario.Document)).FirstOrDefault();
+                if (usuario == null)
+                    return NotFound(new General()
+                    {
+                        title = "Actualizar tipo documento",
+                        status = 404,
+                        message = "Usuario no encontrado"
+                    });
+                //public string? IdWorkCenter { get; set; } = null;
+                usuario.TypeDocument = actualizarUsuario.IdTypeDocument != null ? (string)actualizarUsuario.IdTypeDocument : usuario.TypeDocument;
+                usuario.Document = actualizarUsuario.Document != null ? (string)actualizarUsuario.Document : usuario.Document;
+                usuario.IdCompany = actualizarUsuario.IdCompany != null ? (string)actualizarUsuario.IdCompany : usuario.IdCompany;
+                usuario.IdCountry = actualizarUsuario.IdCountry != null ? (string)actualizarUsuario.IdCountry : usuario.IdCountry;
+                usuario.Names = actualizarUsuario.Names != null ? (string)actualizarUsuario.Names : usuario.Names;
+                usuario.Surnames = actualizarUsuario.Surnames != null ? (string)actualizarUsuario.Surnames : usuario.Surnames;
+                usuario.Email = actualizarUsuario.Email != null ? (string)actualizarUsuario.Email : usuario.Email;
+                usuario.EmailAux = actualizarUsuario.EmailAux != null ? (string)actualizarUsuario.EmailAux : usuario.EmailAux;
+                usuario.PhoneNumber = actualizarUsuario.PhoneNumber != null ? (string)actualizarUsuario.PhoneNumber : usuario.PhoneNumber;
+                usuario.PhoneNumberAux = actualizarUsuario.PhoneNumberAux != null ? (string)actualizarUsuario.PhoneNumberAux : usuario.PhoneNumberAux;
+                usuario.IdRol = actualizarUsuario.IdRol != null ? (string)actualizarUsuario.IdRol : usuario.IdRol;
+                usuario.Status = actualizarUsuario.IdEstado != null ? (string)actualizarUsuario.IdEstado : usuario.Status;
+                usuario.IdOccupationProfession = actualizarUsuario.IdOccupationProfession != null ? (string)actualizarUsuario.IdOccupationProfession : usuario.IdOccupationProfession;
+                usuario.HaveDisability = actualizarUsuario.HaveDisability != null ? (bool)actualizarUsuario.HaveDisability : usuario.HaveDisability;
+                usuario.ReadingWritingSkills = actualizarUsuario.ReadingWritingSkills != null ? (bool)actualizarUsuario.ReadingWritingSkills : usuario.ReadingWritingSkills;
+                await context.SaveChangesAsync();
+
+                return Ok(new General()
+                {
+                    title = "Actualizar tipo documento",
+                    status = 200,
+                    message = "Tipo documento actualizado"
+                });
+            }
+            catch (Exception ex)
+            {
+                logger.LogError("Actualizar tipo documento" + ex.Message.ToString() + " - " + ex.StackTrace);
+                return BadRequest(new General()
+                {
+                    title = "Actualizar tipo documento",
+                    status = 400,
+                    message = ""
+                });
+            }
+        }
         #endregion
     }
 }
