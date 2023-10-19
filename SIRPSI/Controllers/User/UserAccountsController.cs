@@ -519,85 +519,85 @@ namespace SIRPSI.Controllers.User
         #endregion
 
         #region Login
-        [HttpPost("Login")]
-        public async Task<ActionResult<AuthenticationResponse>> Login(UserCredentials userCredentials)
-        {
-            try
-            {
-                //Consulta estados
-                var estados = await context.estados.Select(x => new { x.Id, x.IdConsecutivo }).Where(x => x.IdConsecutivo.Equals(1) || x.IdConsecutivo.Equals(3) || x.IdConsecutivo.Equals(9)).Select(x => x.Id).ToListAsync();
-                //Consulta empresa
-                var empresa = await context.empresas.Where(x => x.Documento.Equals(userCredentials.IdCompany) && x.IdEstado == statusSettings.Activo).ToListAsync();
-                if (empresa == null)
-                    return BadRequest(new General()
-                    {
-                        title = "usuario",
-                        status = 400,
-                        message = "Empresa no encontrado o su estado no es activo."
-                    });
-                //Cconsulta usuarios
-                var existUser = await context.AspNetUsers
-                    .Where(x => x.Document.Equals(userCredentials.Document) && estados.Contains(x.Status)).FirstOrDefaultAsync();
+        //[HttpPost("Login")]
+        //public async Task<ActionResult<AuthenticationResponse>> Login(UserCredentials userCredentials)
+        //{
+        //    try
+        //    {
+        //        Consulta estados
+        //        var estados = await context.estados.Select(x => new { x.Id, x.IdConsecutivo }).Where(x => x.IdConsecutivo.Equals(1) || x.IdConsecutivo.Equals(3) || x.IdConsecutivo.Equals(9)).Select(x => x.Id).ToListAsync();
+        //        Consulta empresa
+        //        var empresa = await context.empresas.Where(x => x.Documento.Equals(userCredentials.IdCompany) && x.IdEstado == statusSettings.Activo).ToListAsync();
+        //        if (empresa == null)
+        //            return BadRequest(new General()
+        //            {
+        //                title = "usuario",
+        //                status = 400,
+        //                message = "Empresa no encontrado o su estado no es activo."
+        //            });
+        //        Cconsulta usuarios
+        //        var existUser = await context.AspNetUsers
+        //            .Where(x => x.Document.Equals(userCredentials.Document) && estados.Contains(x.Status)).FirstOrDefaultAsync();
 
-                if(existUser != null) existUser = empresa.Where(x => x.Id == existUser.IdCompany).FirstOrDefault() == null ? null : existUser;
-                if (existUser == null || !estados.Contains(existUser.Status))
-                {
-                    return BadRequest(new General()
-                    {
-                        title = "usuario",
-                        status = 400,
-                        message = "Usuario no encontrado o su estado no es activo."
-                    });
-                }
-                var listEmpresasDb = existUser.IdCompany.Split(",").Select(x => x.Trim()).ToList();
-                var contextListEmpresas = await context.empresas.Where(x => listEmpresasDb.Contains(x.Id)).ToListAsync();
-                var dataEmpresa = await context.empresas.Where(x => listEmpresasDb.Contains(x.Id) && x.Documento.Equals(userCredentials.IdCompany)).Select(x => x.Id).FirstOrDefaultAsync();
-                if (dataEmpresa != null)
-                {
-                    userCredentials.IdCompany = dataEmpresa != null ? dataEmpresa : "";
-                }
-                else
-                {
-                    userCredentials.IdCompany = "";
-                }
-                var email = existUser.Email.Trim() != null ? existUser.Email.Trim() : "";
-                var result = await signInManager.PasswordSignInAsync(existUser,
-                userCredentials.Password, isPersistent: false, lockoutOnFailure: false);
-                //var userId = userManager.FindByIdAsync();
-                userCredentials.IdRol = existUser.IdRol;
-                userCredentials.Id = existUser.Id;
-                userCredentials.Names = existUser.Names;
-                userCredentials.Surnames = existUser.Surnames;
-                userCredentials.IdCompany = existUser.IdCompany;
-                userCredentials.Email = existUser.Email;
-                userCredentials.Role = context.AspNetRoles.Where(x => x.Id == existUser.IdRol).First().Name;
-                if (result.Succeeded)
-                {
-                    logger.LogInformation("Login de usuario ¡exitoso!");
-                    return await BuildToken(userCredentials);
-                }
-                else
-                {
-                    logger.LogError("Login de usuario ¡fallido!");
-                    return BadRequest(new General()
-                    {
-                        title = "User",
-                        status = 400,
-                        message = "Login de usuario ¡fallido!"
-                    });
-                }
-            }
-            catch (Exception ex)
-            {
-                logger.LogError("usuario " + ex.Message + ex.StackTrace);
-                return BadRequest(new General()
-                {
-                    title = "usuario",
-                    status = 400,
-                    message = "Login de usuario ¡fallido!"
-                });
-            }
-        }
+        //        if (existUser != null) existUser = empresa.Where(x => x.Id == existUser.IdCompany).FirstOrDefault() == null ? null : existUser;
+        //        if (existUser == null || !estados.Contains(existUser.Status))
+        //        {
+        //            return BadRequest(new General()
+        //            {
+        //                title = "usuario",
+        //                status = 400,
+        //                message = "Usuario no encontrado o su estado no es activo."
+        //            });
+        //        }
+        //        var listEmpresasDb = existUser.IdCompany.Split(",").Select(x => x.Trim()).ToList();
+        //        var contextListEmpresas = await context.empresas.Where(x => listEmpresasDb.Contains(x.Id)).ToListAsync();
+        //        var dataEmpresa = await context.empresas.Where(x => listEmpresasDb.Contains(x.Id) && x.Documento.Equals(userCredentials.IdCompany)).Select(x => x.Id).FirstOrDefaultAsync();
+        //        if (dataEmpresa != null)
+        //        {
+        //            userCredentials.IdCompany = dataEmpresa != null ? dataEmpresa : "";
+        //        }
+        //        else
+        //        {
+        //            userCredentials.IdCompany = "";
+        //        }
+        //        var email = existUser.Email.Trim() != null ? existUser.Email.Trim() : "";
+        //        var result = await signInManager.PasswordSignInAsync(existUser,
+        //        userCredentials.Password, isPersistent: false, lockoutOnFailure: false);
+        //        var userId = userManager.FindByIdAsync();
+        //        userCredentials.IdRol = existUser.IdRol;
+        //        userCredentials.Id = existUser.Id;
+        //        userCredentials.Names = existUser.Names;
+        //        userCredentials.Surnames = existUser.Surnames;
+        //        userCredentials.IdCompany = existUser.IdCompany;
+        //        userCredentials.Email = existUser.Email;
+        //        userCredentials.Role = context.AspNetRoles.Where(x => x.Id == existUser.IdRol).First().Name;
+        //        if (result.Succeeded)
+        //        {
+        //            logger.LogInformation("Login de usuario ¡exitoso!");
+        //            return await BuildToken(userCredentials);
+        //        }
+        //        else
+        //        {
+        //            logger.LogError("Login de usuario ¡fallido!");
+        //            return BadRequest(new General()
+        //            {
+        //                title = "User",
+        //                status = 400,
+        //                message = "Login de usuario ¡fallido!"
+        //            });
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        logger.LogError("usuario " + ex.Message + ex.StackTrace);
+        //        return BadRequest(new General()
+        //        {
+        //            title = "usuario",
+        //            status = 400,
+        //            message = "Login de usuario ¡fallido!"
+        //        });
+        //    }
+        //}
 
         #endregion
 

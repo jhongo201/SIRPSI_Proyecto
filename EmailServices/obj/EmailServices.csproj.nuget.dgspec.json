@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\oct 17\\SIRPSI_Proyecto\\EmailServices\\EmailServices.csproj": {}
+    "C:\\Users\\Santiago Andres\\Downloads\\SIRRI\\SIRPSI_Proyecto\\EmailServices\\EmailServices.csproj": {}
   },
   "projects": {
-    "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\oct 17\\SIRPSI_Proyecto\\EmailServices\\EmailServices.csproj": {
+    "C:\\Users\\Santiago Andres\\Downloads\\SIRRI\\SIRPSI_Proyecto\\EmailServices\\EmailServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\oct 17\\SIRPSI_Proyecto\\EmailServices\\EmailServices.csproj",
+        "projectUniqueName": "C:\\Users\\Santiago Andres\\Downloads\\SIRRI\\SIRPSI_Proyecto\\EmailServices\\EmailServices.csproj",
         "projectName": "EmailServices",
-        "projectPath": "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\oct 17\\SIRPSI_Proyecto\\EmailServices\\EmailServices.csproj",
-        "packagesPath": "C:\\Users\\JHON\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\Jhon\\Documentos\\Proyecto\\Diego\\oct 17\\SIRPSI_Proyecto\\EmailServices\\obj\\",
+        "projectPath": "C:\\Users\\Santiago Andres\\Downloads\\SIRRI\\SIRPSI_Proyecto\\EmailServices\\EmailServices.csproj",
+        "packagesPath": "C:\\Users\\Santiago Andres\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Santiago Andres\\Downloads\\SIRRI\\SIRPSI_Proyecto\\EmailServices\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\JHON\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Santiago Andres\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -5,7 +5,7 @@ using DataAccess.Models.OccupationProfession;
 using DataAccess.Models.PsychologistsCenterWork;
 using DataAccess.Models.Status;
 using DataAccess.Models.WorkPlace;
-using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity; 
 
 namespace SIRPSI.DTOs.User
 {

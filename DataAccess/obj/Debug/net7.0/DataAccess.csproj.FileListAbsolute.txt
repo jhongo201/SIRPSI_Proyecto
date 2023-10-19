@@ -68,3 +68,17 @@ D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\DataAccess\obj\De
 D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.pdb
 D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.genruntimeconfig.cache
 D:\Users\Jhon\Documentos\Proyecto\Diego\oct 17\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\ref\DataAccess.dll
+C:\Users\Santiago Andres\Downloads\SIRRI\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.deps.json
+C:\Users\Santiago Andres\Downloads\SIRRI\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.runtimeconfig.json
+C:\Users\Santiago Andres\Downloads\SIRRI\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.dll
+C:\Users\Santiago Andres\Downloads\SIRRI\SIRPSI_Proyecto\DataAccess\bin\Debug\net7.0\DataAccess.pdb
+C:\Users\Santiago Andres\Downloads\SIRRI\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\Santiago Andres\Downloads\SIRRI\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Santiago Andres\Downloads\SIRRI\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\Santiago Andres\Downloads\SIRRI\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfo.cs
+C:\Users\Santiago Andres\Downloads\SIRRI\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Santiago Andres\Downloads\SIRRI\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.dll
+C:\Users\Santiago Andres\Downloads\SIRRI\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\refint\DataAccess.dll
+C:\Users\Santiago Andres\Downloads\SIRRI\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.pdb
+C:\Users\Santiago Andres\Downloads\SIRRI\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\DataAccess.genruntimeconfig.cache
+C:\Users\Santiago Andres\Downloads\SIRRI\SIRPSI_Proyecto\DataAccess\obj\Debug\net7.0\ref\DataAccess.dll

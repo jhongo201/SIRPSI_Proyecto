@@ -29,6 +29,7 @@ using DataAccess.Models.ReportsRole;
 using DataAccess.Models.OccupationalLicense;
 using DataAccess.Models.RepresentativeCompany;
 using DataAccess.Models.PsychosocialEvaluation;
+using DataAccess.Models.Tests;
 
 namespace DataAccess.Context
 {
@@ -71,6 +72,8 @@ namespace DataAccess.Context
         public DbSet<EvaluacionPsicosocialUsuario> evaluacionPsicosocialUsuario { get; set; }
         public DbSet<LicenciaOcupacional> licenciaOcupacional { get; set; }
         public DbSet<RepresentanteEmpresa> representanteEmpresa { get; set; }
+        public DbSet<Dominios> dominios { get; set; }
+        public DbSet<Dimensiones> dimensiones { get; set; }
 
         //private void SeeData(ModelBuilder modelBuilder)
         //{

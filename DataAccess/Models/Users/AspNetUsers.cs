@@ -26,5 +26,10 @@ namespace DataAccess.Models.Users
         public string? IdOccupationProfession { get; set; } = null;
         public bool? HaveDisability { get; set; } = null;
         public bool? ReadingWritingSkills { get; set; } = null;
+
+        public static implicit operator string?(AspNetUsers? v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
