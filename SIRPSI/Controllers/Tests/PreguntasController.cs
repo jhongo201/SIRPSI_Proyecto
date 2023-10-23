@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DataAccess.Context;
+using DataAccess.Models.Tests;
 using EmailServices;
 using EvertecApi.Log4net;
 using Microsoft.AspNetCore.Identity;
@@ -11,10 +12,9 @@ using SIRPSI.Settings;
 
 namespace SIRPSI.Controllers.Tests
 {
-
     [Route("api/[controller]")]
     [ApiController]
-    public class DimensionesController : Controller
+    public class PreguntasController : Controller
     {
         #region Dependencias
         private readonly AppDbContext context;
@@ -24,10 +24,11 @@ namespace SIRPSI.Controllers.Tests
         private readonly IMapper mapper;
         private readonly IEmailSender emailSender;
         private readonly StatusSettings statusSettings;
-         
+
         //Constructor  
-        public DimensionesController(AppDbContext context,
+        public PreguntasController(AppDbContext context,
             IConfiguration configuration,
+            UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
             ILoggerManager logger,
             IMapper mapper,
@@ -49,24 +50,34 @@ namespace SIRPSI.Controllers.Tests
 
 
         #region Consultar
-        [HttpGet("ConsultarDimension", Name = "ConsultarDimension")]
+        [HttpGet("ConsultarPreguntas", Name = "ConsultarPreguntas")]
         //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public async Task<ActionResult<object>> GetDimension()
+        public async Task<ActionResult<object>> GetPreguntas()
         {
             try
             {
-                var dimensionConsultada = (from data in (await context.dimensiones.ToListAsync())
-                                           join dominio in context.dominios on data.IdDominio equals dominio.Id
-                                           orderby data.Id ascending
-                                           select new ConsultarDimensionesDto()
-                                           {
-                                               Id = data.Id,
-                                               Nombre = data.Nombre,
-                                               IdEstado = data.IdEstado,
-                                               IdUsuarioRegistra = data.IdUsuarioRegistra,
-                                               IdDominio = data.IdDominio,
-                                               Dominio = dominio.Nombre, // Agregar el nombre del dominio directamente
-                                           }).ToList();
+                var dimensionConsultada = (from data in (await context.preguntas.ToListAsync())
+                    join dimensiones in context.dimensiones on data.IdDimension equals dimensiones.Id
+                    join forma in context.forma on data.IdForma equals forma.Id
+                    //join dominios in context.dominios on dimensiones.IdDominio equals dominios.Id
+
+                    orderby data.Id ascending
+                    select new ConsultarPreguntasDto()
+                    {
+                        Id = data.Id,
+                        Pregunta = data.Pregunta,
+                        Posicion = data.Posicion,
+                        Siempre = data.Siempre,
+                        CasiSiempre = data.CasiSiempre,
+                        AlgunasVeces = data.AlgunasVeces,
+                        CasiNunca = data.CasiNunca,
+                        Nunca = data.Nunca,
+                        IdDimension = data.IdDimension,
+                        Dimension = dimensiones.Nombre,
+                        Forma = forma.Nombre,
+                        Dominio = dimensiones.IdDominio,
+                        //DominioId = dominios.Nombre,
+                    }).ToList();
 
                 if (dimensionConsultada == null)
                 {
@@ -80,20 +91,22 @@ namespace SIRPSI.Controllers.Tests
                 }
                 //Retorno de los datos encontrados
                 return dimensionConsultada;
-            }
+        }
             catch (Exception ex)
             {
                 //Registro de errores
                 logger.LogError("Consultar usuario " + ex.Message.ToString() + " - " + ex.StackTrace);
                 return BadRequest(new General()
-                {
-                    title = "Consultar usuario",
+        {
+            title = "Consultar usuario",
                     status = 400,
                     message = "Contacte con el administrador del sistema"
                 });
             }
-        }
+}
         #endregion
+
+
 
 
     }

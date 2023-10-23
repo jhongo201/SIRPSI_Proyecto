@@ -74,6 +74,8 @@ namespace DataAccess.Context
         public DbSet<RepresentanteEmpresa> representanteEmpresa { get; set; }
         public DbSet<Dominios> dominios { get; set; }
         public DbSet<Dimensiones> dimensiones { get; set; }
+        public DbSet<Preguntas> preguntas { get; set; }
+        public DbSet<Formas> forma { get; set; }
 
         //private void SeeData(ModelBuilder modelBuilder)
         //{

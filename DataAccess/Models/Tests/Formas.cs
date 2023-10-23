@@ -5,12 +5,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
 
 namespace DataAccess.Models.Tests
 {
-    [Table("Dominios", Schema = "sirpsi")]
-    public partial class Dominios 
+    [Table("Formas", Schema = "sirpsi")]
+    public partial class Formas
     {
         [Key]
         public string Id { get; set; }
@@ -18,8 +17,5 @@ namespace DataAccess.Models.Tests
         public string Nombre { get; set; }
         public string IdEstado { get; set; }
         public string IdUsuarioRegistra { get; set; }
-        public string Forma { get; set; }
-
-        
     }
 }

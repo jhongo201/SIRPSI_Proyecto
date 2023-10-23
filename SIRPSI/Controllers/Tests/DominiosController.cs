@@ -67,8 +67,6 @@ namespace SIRPSI.Controllers.Tests
                                              Id = data.Id,
                                              Nombre = data.Nombre,
                                              IdEstado = data.IdEstado,
-                                             IdUsuarioRegistra = data.IdUsuarioRegistra,
-                                             Forma = data.Forma,
 
                                          }).ToList();
 
