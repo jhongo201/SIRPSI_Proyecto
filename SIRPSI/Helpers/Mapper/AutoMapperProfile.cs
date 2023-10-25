@@ -12,6 +12,7 @@ using DataAccess.Models.PsychosocialEvaluation;
 using DataAccess.Models.RepresentativeCompany;
 using DataAccess.Models.Rols;
 using DataAccess.Models.Status;
+using DataAccess.Models.Tests;
 using DataAccess.Models.Users;
 using DataAccess.Models.Variables;
 using DataAccess.Models.WorkPlace;
@@ -25,6 +26,7 @@ using SIRPSI.DTOs.OccupationalLicense;
 using SIRPSI.DTOs.PsychosocialEvaluation;
 using SIRPSI.DTOs.RepresentativeCompany;
 using SIRPSI.DTOs.Status;
+using SIRPSI.DTOs.Tests;
 using SIRPSI.DTOs.User;
 using SIRPSI.DTOs.User.Roles;
 using SIRPSI.DTOs.User.RolesUsuario;
@@ -107,7 +109,7 @@ namespace SIRPSI.Helpers
             CreateMap<TiposDocumento, RegistrarTipoDocumento>().ReverseMap();
             CreateMap<TiposDocumento, ActualizarTipoDocumento>().ReverseMap();
             CreateMap<TiposDocumento, EliminarTipoDocumento>().ReverseMap();
-            #endregion
+            #endregion 
 
             #region Modulo
             CreateMap<Modulo, ConsultarModulo>().ReverseMap();
@@ -149,6 +151,8 @@ namespace SIRPSI.Helpers
             CreateMap<EvaluacionPsicosocialUsuario, RegistrarEvaluacionPsicosocial>().ReverseMap();
             CreateMap<EvaluacionPsicosocialUsuario, RegistrarEvaluacionPsicosocial>().ReverseMap();
             CreateMap<EvaluacionPsicosocialUsuario, RegistrarEvaluacionPsicosocial>().ReverseMap();
+            CreateMap<DetalleEvaluacionPsicosocial, DetalleEvaluacionPsicosocialDto>().ReverseMap();
+            CreateMap<Employees, EmployeeDataDto>().ReverseMap();
             #endregion
 
             #region Licencia ocupacional

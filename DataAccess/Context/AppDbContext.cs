@@ -30,6 +30,8 @@ using DataAccess.Models.OccupationalLicense;
 using DataAccess.Models.RepresentativeCompany;
 using DataAccess.Models.PsychosocialEvaluation;
 using DataAccess.Models.Tests;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace DataAccess.Context
 {
@@ -76,6 +78,13 @@ namespace DataAccess.Context
         public DbSet<Dimensiones> dimensiones { get; set; }
         public DbSet<Preguntas> preguntas { get; set; }
         public DbSet<Formas> forma { get; set; }
+        public DbSet<DetalleEvaluacionPsicosocial> detalleEvaluacionPsicosocial { get; set; }
+        public DbSet<Employees> empleado { get; set; }
+
+
+
+
+
 
         //private void SeeData(ModelBuilder modelBuilder)
         //{

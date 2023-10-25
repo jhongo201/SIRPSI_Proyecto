@@ -12,9 +12,9 @@ namespace DataAccess.Models.Tests
     public partial class Dimensiones
     {
         [Key]
-        public string? Id { get; set; }
+        public string Id { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string? Nombre { get; set; }
+        public string Nombre { get; set; }
         public string? IdEstado { get; set; }
         public string? IdUsuarioRegistra { get; set; }
         public string? IdDominio { get; set; }
