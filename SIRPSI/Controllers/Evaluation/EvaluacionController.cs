@@ -148,65 +148,64 @@ namespace SIRPSI.Controllers.Evaluation
             return Ok(users);
         }
 
-        //[HttpGet("ConsultarEvaluacion", Name = "consultarEvaluacion")]
+
+
+        [HttpGet("ConsultarEvaluacionUsuarioId", Name = "consultarEvaluacionUsuarioId")]
         //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        //public async Task<ActionResult<object>> Get()
-        //{
-        //    try
-        //    {
-        //        var identity = HttpContext.User.Identity as ClaimsIdentity;
-        //        if (identity != null)
-        //        {
-        //            IEnumerable<Claim> claims = identity.Claims;
-        //        }
-        //        var documento = identity.FindFirst("documento").Value.ToString();
-        //        var Evaluacion = identity.FindFirst("rol").Value.ToString();
-        //        var usuario = context.AspNetUsers.Where(u => u.Document.Equals(documento)).FirstOrDefault();
-        //        if (usuario == null)
-        //        {
-        //            return NotFound(new General()
-        //            {
-        //                title = "Consultar Evaluacion",
-        //                status = 404,
-        //                message = "Usuario no encontrado"
-        //            });
-        //        }
-        //        var rol = (from data in (await context.evaluacion.ToListAsync())
-        //                   select new ConsultarEvaluacion
-        //                   {
-        //                       Id = data.Id,
-        //                       Nombre = data.Nombre,
-        //                       Descripcion = data.Descripcion,
-        //                       UsuarioRegistra = data.UsuarioRegistra,
-        //                       FechaCreacion = data.FechaCreacion,
-        //                       FechaInicio = data.FechaInicio,
-        //                       FechaFin = data.FechaFin,
-        //                       Usuario = (context.AspNetUsers.Where(x => x.Id == data.UsuarioRegistra).FirstOrDefault()),
-        //                   }).ToList();
+        public async Task<ActionResult<object>> Get(string idUsers)
+        {
+            try
+            {
+                //var identity = HttpContext.User.Identity as ClaimsIdentity;
+                //if (identity != null)
+                //{
+                //    IEnumerable<Claim> claims = identity.Claims;
+                //}
+                //var documento = identity.FindFirst("documento").Value.ToString();
+                //var Evaluacion = identity.FindFirst("rol").Value.ToString();
+                //var usuario = context.AspNetUsers.Where(u => u.Document.Equals(documento)).FirstOrDefault();
+                //if (usuario == null)
+                //{
+                //    return NotFound(new General()
+                //    {
+                //        title = "Consultar Evaluacion",
+                //        status = 404,
+                //        message = "Usuario no encontrado"
+                //    });
+                //}
+                var rol = (from data in (await context.evaluacionPsicosocialUsuario.ToListAsync())
+                           where data.IdUsuario == idUsers && data.Finalizado == false
+                           select new ConsultarEvaluacionPsicosocial
+                           {
+                               Id = data.Id,
+                               Finalizado = data.Finalizado,
+                               FechaInicio = data.FechaInicio,
+                              
+                           }).ToList();
 
-        //        if (rol == null)
-        //        {
-        //            return NotFound(new General()
-        //            {
-        //                title = "Consultar Evaluacion",
-        //                status = 404,
-        //                message = "Rol no encontrado"
-        //            });
-        //        }
-        //        return rol;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        logger.LogError("Consultar Evaluacion " + ex.Message.ToString() + " - " + ex.StackTrace);
-        //        return BadRequest(new General()
-        //        {
-        //            title = "Consultar Evaluacion",
-        //            status = 400,
-        //            message = "Contacte con el administrador del sistema"
-        //        });
-        //    }
+                if (rol == null)
+                {
+                    return NotFound(new General()
+                    {
+                        title = "Consultar Evaluacion",
+                        status = 404,
+                        message = "Rol no encontrado"
+                    });
+                }
+                return rol;
+            }
+            catch (Exception ex)
+            {
+                logger.LogError("Consultar Evaluacion " + ex.Message.ToString() + " - " + ex.StackTrace);
+                return BadRequest(new General()
+                {
+                    title = "Consultar Evaluacion",
+                    status = 400,
+                    message = "Contacte con el administrador del sistema"
+                });
+            }
 
-        //}
+        }
         #endregion
 
         #region Registro

@@ -66,7 +66,7 @@ namespace SIRPSI.Controllers.Tests
                                            join dimensiones in context.dimensiones on data.IdDimension equals dimensiones.Id
                                            join forma in context.forma on data.IdForma equals forma.Id
                                            //join dominios in context.dominios on dimensiones.IdDominio equals dominios.Id
-
+                                           //where data.IdForma == "36256B62-F7CE-49FE-867F-8B2578DAEE4D" 
                                            orderby data.Id ascending
                                            select new ConsultarPreguntasDto()
                                            {
@@ -93,6 +93,117 @@ namespace SIRPSI.Controllers.Tests
                         title = "Consultar usuario",
                         status = 404,
                         message = "Usuarios no encontrados"
+                    });
+                }
+                //Retorno de los datos encontrados
+                return dimensionConsultada;
+            }
+            catch (Exception ex)
+            {
+                //Registro de errores
+                logger.LogError("Consultar usuario " + ex.Message.ToString() + " - " + ex.StackTrace);
+                return BadRequest(new General()
+                {
+                    title = "Consultar usuario",
+                    status = 400,
+                    message = "Contacte con el administrador del sistema"
+                });
+            }
+        }
+
+
+
+
+
+
+        [HttpGet("ConsultarRespuestasUsuarios", Name = "ConsultarRespuestasUsuarios")]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult<object>> GetPreguntasUsuarios(string idUsuario)
+        {
+            try
+            {
+                var dimensionConsultada = (from data in (await context.detalleEvaluacionPsicosocial.ToListAsync())
+                                           where data.IdUserEvaluacion == idUsuario
+                                           orderby data.Id ascending
+                                           select new DetalleEvaluacionPsicosocialDto()
+                                           {
+                                               IdPreguntaEvaluacion = data.IdPreguntaEvaluacion,
+                                               Respuesta = data.Respuesta,
+                                               Puntuacion = data.Puntuacion,
+                                           }).ToList();
+
+                if (dimensionConsultada == null)
+                {
+                    //Visualizacion de mensajes al usuario del aplicativo
+                    return NotFound(new General()
+                    {
+                        title = "Consultar respuestas",
+                        status = 404,
+                        message = "Respuestas no encontradas"
+                    });
+                }
+                //Retorno de los datos encontrados
+                return dimensionConsultada;
+            }
+            catch (Exception ex)
+            {
+                //Registro de errores
+                logger.LogError("Consultar usuario " + ex.Message.ToString() + " - " + ex.StackTrace);
+                return BadRequest(new General()
+                {
+                    title = "Consultar usuario",
+                    status = 400,
+                    message = "Contacte con el administrador del sistema"
+                });
+            }
+        }
+
+
+
+
+
+
+
+        [HttpGet("ConsultarBrutoDimension", Name = "ConsultarBrutoDimension")]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult<object>> GetValorBrutoDimension(string IdEvaluacion)
+        {
+            try
+            {
+                var dimensionConsultada = (from data in (await context.detalleEvaluacionPsicosocial.ToListAsync())
+                                           where data.IdEvaluacionPsicosocialUsuario == IdEvaluacion
+                                           join pregunta in context.preguntas on data.IdPreguntaEvaluacion equals pregunta.Id
+                                           join forma in context.forma on pregunta.IdForma equals forma.Id
+                                           join dimension in context.dimensiones on pregunta.IdDimension equals dimension.Id
+                                           join dominio in context.dominios on dimension.IdDominio equals dominio.Id
+                                           orderby data.Id ascending
+                                           group new { data, dimension, dominio, pregunta, forma } by forma into dimensionGroup
+                                           select new
+                                           {
+                                               Dimension = dimensionGroup.Key.Nombre, // Nombre de la dimensión
+                                               IdDimension = dimensionGroup.Key.Id, // Nombre de la dimensión
+                                               Dominio = dimensionGroup.Key.Id, // Id del dominio
+                                               Detalles = dimensionGroup.Select(item => new DetalleEvaluacionPsicosocialDto
+                                               {
+                                                   IdDimension = item.data.IdDimension,
+                                                   NombreDimension = item.dimension.Nombre,
+                                                   IdPreguntaEvaluacion = item.data.IdPreguntaEvaluacion,
+                                                   Respuesta = item.data.Respuesta,
+                                                   Puntuacion = item.data.Puntuacion,
+                                                   IdUserEvaluacion = item.data.IdUserEvaluacion,
+                                                   
+                                                   Forma = item.forma.Nombre,
+                                               }).ToList()
+                                           }).ToList();
+
+                if (dimensionConsultada == null)
+                {
+                    //Visualizacion de mensajes al usuario del aplicativo
+                    return NotFound(new General()
+                    {
+                        title = "Bruto dimensión",
+                        status = 404,
+                        message = "Respuestas no encontradas"
                     });
                 }
                 //Retorno de los datos encontrados
@@ -141,6 +252,8 @@ namespace SIRPSI.Controllers.Tests
                 detalleEvaluacion.Respuesta = detalle.Respuesta;
                 detalleEvaluacion.Puntuacion = detalle.Puntuacion;
                 detalleEvaluacion.IdUserEvaluacion = detalle.IdUserEvaluacion;
+                detalleEvaluacion.IdDimension = detalle.IdDimension;
+                detalleEvaluacion.IdDominio = detalle.IdDominio;
 
                 //Agregar datos al contexto
                 context.Add(detalleEvaluacion);
@@ -264,7 +377,7 @@ namespace SIRPSI.Controllers.Tests
         #region Actualizar
         [HttpPut("ActualizarRespuestasPreguntas")]
         //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public async Task<ActionResult> PutSaveResponse(string id_pregunta, int responseData)
+        public async Task<ActionResult> PutSaveResponse(string id_pregunta, int responseData, string puntuacion)
         {
             try
             {
@@ -283,6 +396,7 @@ namespace SIRPSI.Controllers.Tests
 
                 //Mapeo de datos en clases
                 detalleEvluacion.Respuesta = responseData;
+                detalleEvluacion.Puntuacion = puntuacion;
                 await context.SaveChangesAsync();
 
 
