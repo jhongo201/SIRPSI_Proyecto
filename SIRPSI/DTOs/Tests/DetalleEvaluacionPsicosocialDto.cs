@@ -13,8 +13,10 @@ namespace SIRPSI.DTOs.Tests
         public string? IdDominio { get; set; }
         public string? Forma { get; set; }
         public string? NombreDimension { get; set; }
-        
-
+        public int? valorA1Dimension { get; set; }
+        public int? valorA2Dimension { get; set; }
+        public int? valorA1Dominio { get; set; }
+        public int? valorA2Dominio { get; set; }
 
     }
 }

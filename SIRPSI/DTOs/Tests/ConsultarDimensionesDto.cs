@@ -11,5 +11,7 @@ namespace SIRPSI.DTOs.Tests
         public string? IdUsuarioRegistra { get; set; }
         public string? IdDominio { get; set; }
         public string? Dominio { get; set; }
+        public int? valorA1 { get; set; }
+        public int? valorA2 { get; set; }
     }
 }

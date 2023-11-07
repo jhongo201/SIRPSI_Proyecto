@@ -31,5 +31,7 @@ namespace SIRPSI.DTOs.User
         public string? IdOccupationProfession { get; set; } = null;
         public bool? HaveDisability { get; set; } = null;
         public bool? ReadingWritingSkills { get; set; } = null;
+        public string? Clasificacion { get; set; }
+
     }
 }

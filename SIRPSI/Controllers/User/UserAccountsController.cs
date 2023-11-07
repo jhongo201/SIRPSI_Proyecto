@@ -201,6 +201,8 @@ namespace SIRPSI.Controllers.User
                 userNet.UserModify = null;
                 userNet.ModifiedDate = null;
                 userNet.Status = userCredentials.IdEstado;
+                userNet.Clasificacion = userCredentials.Clasificacion;
+
                 userNet.Id = Guid.NewGuid().ToString();
 
                 if (emailValidation != "ministerio" && validarionRoleEspecial != null)

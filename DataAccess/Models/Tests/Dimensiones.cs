@@ -18,5 +18,8 @@ namespace DataAccess.Models.Tests
         public string? IdEstado { get; set; }
         public string? IdUsuarioRegistra { get; set; }
         public string? IdDominio { get; set; }
+        public int? valorA1 { get; set; }
+        public int? valorA2 { get; set; }
+
     }
 }

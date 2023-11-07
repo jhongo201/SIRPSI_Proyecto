@@ -15,14 +15,15 @@ namespace DataAccess.Models.Tests
         public string Id { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string Pregunta { get; set; }
-        public int? Posicion { get; set; }
-        public int? Siempre { get; set; }
-        public int? CasiSiempre { get; set; }
-        public int? AlgunasVeces { get; set; }
-        public int? CasiNunca { get; set; }
-        public int? Nunca { get; set; }
+        public int Posicion { get; set; }
+        public int Siempre { get; set; }
+        public int CasiSiempre { get; set; }
+        public int AlgunasVeces { get; set; }
+        public int CasiNunca { get; set; }
+        public int Nunca { get; set; }
         public string? IdForma { get; set; }
-        public string? IdDimension { get; set; }
+        public string IdDimension { get; set; }
+        public string grupo { get; set; }
 
     }
 }
