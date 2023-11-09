@@ -67,7 +67,7 @@ namespace SIRPSI.Controllers.Tests
                                            join dimensiones in context.dimensiones on data.IdDimension equals dimensiones.Id
                                            join forma in context.forma on data.IdForma equals forma.Id
                                            join dominios in context.dominios on dimensiones.IdDominio equals dominios.Id
-                                           //where data.IdForma == "36256B62-F7CE-49FE-867F-8B2578DAEE4D" 
+                                           where data.IdForma == "34AB30E6-D56A-40EE-8430-805FB678DC72"
                                            orderby data.Id ascending
                                            select new ConsultarPreguntasDto()
                                            {

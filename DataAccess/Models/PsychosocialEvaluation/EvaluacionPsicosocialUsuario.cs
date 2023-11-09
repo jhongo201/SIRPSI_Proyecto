@@ -12,5 +12,6 @@ namespace DataAccess.Models.PsychosocialEvaluation
         public string IdEstado { get; set; }
         public string IdUsuarioRegistra { get; set; }
         public bool Finalizado { get; set; }
+        public string? radicadoEvaluacion { get; set; }
     }
 }

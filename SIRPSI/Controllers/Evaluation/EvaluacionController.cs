@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using SIRPSI.DTOs.Companies;
 using SIRPSI.DTOs.Module;
 using SIRPSI.DTOs.PsychosocialEvaluation;
 using SIRPSI.DTOs.User;
@@ -174,12 +175,19 @@ namespace SIRPSI.Controllers.Evaluation
                 //    });
                 //}
                 var rol = (from data in (await context.evaluacionPsicosocialUsuario.ToListAsync())
+                           join usuarios in context.AspNetUsers on data.IdUsuarioRegistra equals usuarios.Id
+                           join empresa in context.empresas on usuarios.IdCompany equals empresa.Id
                            where data.IdUsuario == idUsers && data.Finalizado == false
-                           select new ConsultarEvaluacionPsicosocial
+                           select new InformacionEvaluacionDto
                            {
                                Id = data.Id,
                                Finalizado = data.Finalizado,
                                FechaInicio = data.FechaInicio,
+                               NamePsicologo = usuarios.Names +" "+usuarios.Surnames,
+                               documentoPsicologo = usuarios.Document,
+                               telefono = usuarios.PhoneNumber,
+                               documentoEmpresa = empresa.Documento
+
                               
                            }).ToList();
 
@@ -263,6 +271,8 @@ namespace SIRPSI.Controllers.Evaluation
         #endregion
 
         #region Actualizar
+
+
         //[HttpPut("ActualizarEvaluacion")]
         //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         //public async Task<ActionResult> Put(ActualizarModulo actualizarRol)
@@ -397,6 +407,48 @@ namespace SIRPSI.Controllers.Evaluation
         //        }); ;
         //    }
         //}
+
+
+
+
+        [HttpPut("RegistrarRadicadoEvaluacion")]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult> AddRadicado(string IdEvaluacion, string radicado)
+        {
+            try
+            {
+                var evaluacion = await context.evaluacionPsicosocialUsuario.Where(x => x.Id == IdEvaluacion).FirstOrDefaultAsync();
+                if (evaluacion == null)
+                
+                return BadRequest(new General()
+                {
+                    title = "evaluacion",
+                    status = 400,
+                    message = "No se ha encontrado una evaluación registrada"
+                });
+
+                evaluacion.radicadoEvaluacion = radicado;
+                var updateEvaluacion = context.Update(evaluacion);
+                await context.SaveChangesAsync();
+                return Ok(new General()
+                {
+                    title = "usuario",
+                    status = 200,
+                    message = "Radicado regisrado exitosamente."
+                });
+
+            }
+            catch (Exception ex)
+            {
+                logger.LogError("Actualizar Evaluacion " + ex.Message.ToString() + " - " + ex.StackTrace);
+                return BadRequest(new General()
+                {
+                    title = "Actualizar Evaluacion",
+                    status = 400,
+                    message = "Contacte con el administrador del sistema"
+                }); ;
+            }
+        }
         #endregion
 
         #region Eliminar
